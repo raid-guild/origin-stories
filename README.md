@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **⚔ Raider Origins ⚔**
+
+This is the place where our raiders gather to tell their stories. We'll learn about their journeys - why they decided to be a raider,any challenges ⚔ they've faced  or achievements 🏆 they have uncovered and more.
+
+## Our tools 🛠
+This project uses:
+- [Next.js](https://nextjs.org/) bootstrapped from [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- [TailwindCSS🍃](https://tailwindcss.com/docs) for managing our CSS
+- [MDX](https://mdxjs.com/) to enable us to write JSX in Markdown files - for our stories
 
 ## Getting Started
+1. Clone the repo - Check out the [docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) if needed
+2. Go into your cloned repo and run the development server:
+    ```bash
+    yarn dev
+    ```
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. You can start editing!
+   - Pages in the `/pages/` folder
+   - Components in the `/components/` folder
 
-First, run the development server:
+## Important Files
+We have some useful files that help us with our tooling.
+- `/tailwind.config.js` is where we configure Tailwind, especially with theme values: fonts, colors etc.
+- `/next.config.js` is where we configure our Next options but also our MDX options.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Adding stories* (subject to change)
+You can add stories by adding new Markdown file to the `/pages/origins` folder. 
