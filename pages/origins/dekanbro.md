@@ -1,5 +1,7 @@
 ### Just testing whats possible
 
+Note that we can use JSX in this file! ⬇
+
 <div>
     <h1 className="font-display text-5xl">Dekan</h1>
     <p className="font-base">
