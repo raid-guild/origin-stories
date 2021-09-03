@@ -6,13 +6,9 @@ const Home = () => {
         <Fragment>
             <Head>
                 <title>Raid Guild Origins</title>
-                <meta
-                    name="viewport"
-                    content="initial-scale=1.0, width=device-width"
-                />
             </Head>
             <main>
-                <h1 className="font-display text-5xl text-raidRed">
+                <h1 className="font-display text-5xl text-primary">
                     Origin Stories Home
                 </h1>
                 <p className="font-sans text-base">
