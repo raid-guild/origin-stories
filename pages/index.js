@@ -7,7 +7,7 @@ const Home = () => {
             <Head>
                 <title>Raid Guild Origins</title>
             </Head>
-            <main className="bg-background">
+            <main className="bg-map h-screen">
                 <h1 className="font-display text-5xl text-primary">
                     Origin Stories Home
                 </h1>
