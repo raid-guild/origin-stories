@@ -24,7 +24,11 @@ module.exports = {
             white: colors.white,
             current: 'currentColor',
         },
-        extend: {},
+        extend: {
+            backgroundImage: theme => ({
+                'background': "url('/public/Background.png')",
+               })
+        },
     },
     variants: {
         extend: {},
