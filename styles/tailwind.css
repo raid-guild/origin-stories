@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-5xl font-display;
+    }
+    h2 {
+        @apply text-4xl font-display;
+    }
+    h3 {
+        @apply text-3xl font-display;
+    }
+    p {
+        @apply font-sans text-base;
+    }
+}

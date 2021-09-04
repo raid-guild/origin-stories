@@ -10,21 +10,22 @@ module.exports = {
     theme: {
         fontFamily: {
             display: ['Uncial Antiqua', 'Open Sans', 'system-ui', 'sans-serif'],
-            body: ['Open Sans', 'system-ui', 'sans-serif'],
+            sans: ['Open Sans', 'system-ui', 'sans-serif'],
         },
-        colors: {
-            primary: {
-                // TODO: Add light and dark versions
-                DEFAULT: '#FF3864',
+        extend: {
+            colors: {
+                primary: {
+                    // TODO: Add light and dark versions
+                    DEFAULT: '#FF3864',
+                },
+                secondary: {
+                    DEFAULT: '#2D0D40',
+                },
+                transparent: 'transparent',
+                white: colors.white,
+                current: 'currentColor',
             },
-            secondary: {
-                DEFAULT: '#2D0D40',
-            },
-            transparent: 'transparent',
-            white: colors.white,
-            current: 'currentColor',
         },
-        extend: {},
     },
     variants: {
         extend: {},
