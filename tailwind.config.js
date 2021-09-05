@@ -23,6 +23,9 @@ module.exports = {
 				current: 'currentColor',
 			},
 		},
+                'map': "url('/images/Background.png')",
+               })
+        },
 	},
 	variants: {
 		extend: {},
