@@ -3,8 +3,8 @@ import { Fragment } from 'react';
 const Card = () => {
 	return (
 		<Fragment>
-			<div className='max-w-sm bg-white border-2 p-6 rounded tracking-normal'>
-				<p className='text-base'>
+			<div className='max-w-sm bg-dark filter contrast-150 saturate-125 opacity-80 backdrop-blur p-6 rounded tracking-normal'>
+				<p>
 					&quot;I would count the permissioned DAOs. I own tokens in other
 					token-multisig-snapshot DAOs and I vote in them sometimes, but I
 					wouldn't necessarily list all of those. The main DAOs that I'm active
@@ -15,8 +15,8 @@ const Card = () => {
 						Circle
 					</div>
 					<div>
-						<p className='font-semibold text-2xl'>Jordan</p>
-						<small className='text-sm font-medium'>@jordanlovesred</small>
+						<p>Jordan</p>
+						<small>@jordanlovesred</small>
 					</div>
 				</div>
 				<div className='border-b-2 my-8'></div>

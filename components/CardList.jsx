@@ -10,12 +10,12 @@ const CardList = () => {
 					<div
 						key={index}
 						className='max-w-sm bg-white border-2 p-6 rounded tracking-normal'>
-						<p className='text-base'>{data.quote}</p>
+						<p>{data.quote}</p>
 						<div className='flex items-center justify-start space-x-4 mt-5'>
 							<Image src={data.picture} alt='Picture of user' />
 							<div>
-								<p className='font-semibold text-2xl'>{data.name}</p>
-								<small className='text-sm font-medium'>{data.username}</small>
+								<p>{data.name}</p>
+								<small>{data.username}</small>
 							</div>
 						</div>
 						<div className='border-b-2 my-8'></div>
