@@ -4,15 +4,15 @@
 
 @layer base {
     h1 {
-        @apply text-5xl font-display;
+        @apply text-5xl font-display font-bold tracking-tight leading-snug text-white;
     }
     h2 {
-        @apply text-4xl font-display;
+        @apply text-4xl font-display font-bold leading-snug text-white;
     }
     h3 {
-        @apply text-3xl font-display;
+        @apply text-3xl font-display font-bold leading-snug text-white;
     }
     p {
-        @apply font-sans text-base;
+        @apply font-sans text-lg leading-relaxed text-white tracking-wide;
     }
 }

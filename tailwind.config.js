@@ -18,7 +18,7 @@ module.exports = {
                     // TODO: Add light and dark versions
                     DEFAULT: '#FF3864',
                 },
-                secondary: {
+                dark: {
                     DEFAULT: '#2D0D40',
                 },
                 transparent: 'transparent',
