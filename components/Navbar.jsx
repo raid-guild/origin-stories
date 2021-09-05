@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import Image from 'next/image'
 import rgLogo from '../public/images/raidguild_logo.svg'
+import Link from 'next/link';
 
 const Navbar = () => {
 	return (
@@ -11,11 +12,11 @@ const Navbar = () => {
 					<p className='font-medium'>Origins</p>
 				</a>
 				<div className='flex space-x-12'>
-					<a
-						className='hover:border-b-2 hover:pb-1'
-						href='#'>
+					<Link
+						className='border-solid border-b-2 pb-1 border-transparent hover:border-white'
+						href='/'>
 						Home
-					</a>
+					</Link>
 					<a
 						className='hover:border-b-2 hover:pb-1'
 						href='#'>

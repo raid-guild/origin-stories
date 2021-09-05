@@ -20,20 +20,46 @@ module.exports = {
                 },
                 dark: {
                     DEFAULT: '#2D0D40',
+                    darker: '#19101F',
                 },
                 transparent: 'transparent',
                 white: colors.white,
                 current: 'currentColor',
             },
-
-            // backgroundImage: theme => ({
-            //     'map': "linear-gradient(180deg, #2D0D40 0%, #FF3864 100%), url('/images/map.png')",
-            //    })
-
+            backgroundImage: (theme) => ({
+                map: "url('/images/map.png')",
+            }),
+            // refer to: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
+            typography: (theme) => ({
+                DEFAULT: {
+                    css: {
+                        color: '#fff',
+                        fontSize: '1.25em',
+                        blockquote: {
+                            borderLeftColor: theme('colors.primary.DEFAULT'),
+                            color: colors.gray[200],
+                            fontWeight: '600',
+                        },
+                        a: {
+                            color: theme('colors.primary.DEFAULT'),
+                            '&:hover': {
+                                color: theme('colors.pink[600]'),
+                                cursor: 'pointer',
+                            },
+                        },
+                        strong: {
+                            color: theme('colors.white'),
+                        },
+                        h4: {
+                            color: colors.white,
+                        },
+                    },
+                },
+            }),
         },
     },
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/typography')],
 };
