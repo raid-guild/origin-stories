@@ -12,21 +12,21 @@ module.exports = {
             display: ['Uncial Antiqua', 'Open Sans', 'system-ui', 'sans-serif'],
             body: ['Open Sans', 'system-ui', 'sans-serif'],
         },
-        extend: {
-            colors: {
-                primary: {
-                    // TODO: Add light and dark versions
-                    DEFAULT: '#FF3864',
-                },
-                secondary: {
-                    DEFAULT: '#2D0D40',
-                },
-                transparent: 'transparent',
-                white: colors.white,
-                current: 'currentColor',
+        colors: {
+            primary: {
+                // TODO: Add light and dark versions
+                DEFAULT: '#FF3864',
             },
+            secondary: {
+                DEFAULT: '#2D0D40',
+            },
+            transparent: 'transparent',
+            white: colors.white,
+            current: 'currentColor',
+        },
+        extend: {
             backgroundImage: theme => ({
-                'map': "url('/images/Background.png')",
+                'map': "linear-gradient(180deg, #2D0D40 0%, #FF3864 100%), url('/images/Background.png')",
                })
         },
     },
