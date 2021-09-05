@@ -9,12 +9,17 @@ const Home = () => {
 			<Head>
 				<title>Raid Guild Origins</title>
 			</Head>
-			<main className='grid grid-rows-3 h-screen'>
-				<Navbar />
-				<h1 className='font-display text-5xl text-primary'>
-					Origin Stories Home
-				</h1>
-				<p className='font-sans text-base'>This page is about cool stuff</p>
+			<Navbar />
+			<main>
+                <div>
+                    <div className='bg-map h-48 pt-10'>
+                        <h1 className='font-display text-5xl text-primary'>
+                            Origin Stories Home
+                        </h1>
+                        <p className='font-sans text-base'>This page is about cool stuff</p>
+                    </div>
+                    <div></div>
+                </div>
 				<Footer />
 			</main>
 		</Fragment>
