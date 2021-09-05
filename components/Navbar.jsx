@@ -1,19 +1,20 @@
 import { Fragment } from 'react';
+import Link from 'next/link';
 
 const Navbar = () => {
 	return (
 		<Fragment>
-			<nav className='flex items-center justify-between h-24 px-8 bg-primary bg-opacity-50'>
+			<nav className='flex items-center justify-between h-24 px-8'>
 				<a className='grid grid-cols-2 items-center space-x-1' href='#'>
 					<div className='text-xl font-semibold border-r-2'>Logo</div>
 					<p className='font-medium'>Origins</p>
 				</a>
 				<div className='flex space-x-12'>
-					<a
-						className='font-sans text-base hover:border-b-2 hover:pb-1'
-						href='#'>
+					<Link
+						className='border-solid border-b-2 pb-1 border-transparent hover:border-white'
+						href='/'>
 						Home
-					</a>
+					</Link>
 					<a
 						className='font-sans text-base hover:border-b-2 hover:pb-1'
 						href='#'>
