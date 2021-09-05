@@ -16,7 +16,7 @@ const Article = () => {
             </div>
             <div className="bg-gradient-to-br from-dark to-gray-800 grid grid-cols-3 xl:px-28 lg:px-24 md:px-20 gap-16 pt-6 h-full">
                 <main className="col-span-2">
-                    <h1 className="font-sans text-white">
+                    <h1>
                         The Origins of Dekan Brown
                     </h1>
                     <p className="text-white opacity-70">
@@ -101,7 +101,7 @@ const Article = () => {
                             </p>
                         </div>
 
-                        <p className="text-white text-xl font-semibold font-sans tracking-tight mb-2">
+                        <p className="text-white text-xl font-semibold tracking-tight mb-2">
                             Dekan Brown
                         </p>
 

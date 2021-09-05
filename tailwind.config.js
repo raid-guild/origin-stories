@@ -26,9 +26,10 @@ module.exports = {
                 current: 'currentColor',
             },
 
-            backgroundImage: theme => ({
-                'map': "linear-gradient(180deg, #2D0D40 0%, #FF3864 100%), url('/images/Background.png')",
-               })
+            // backgroundImage: theme => ({
+            //     'map': "linear-gradient(180deg, #2D0D40 0%, #FF3864 100%), url('/images/map.png')",
+            //    })
+
         },
     },
     variants: {
