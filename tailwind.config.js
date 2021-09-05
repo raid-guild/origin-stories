@@ -23,9 +23,9 @@ module.exports = {
 				current: 'currentColor',
 			},
 		},
-                'map': "url('/images/Background.png')",
-               })
-        },
+		backgroundImage: (theme) => ({
+			map: "url('/images/Background.png')",
+		}),
 	},
 	variants: {
 		extend: {},
