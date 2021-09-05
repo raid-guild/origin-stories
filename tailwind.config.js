@@ -25,6 +25,10 @@ module.exports = {
                 white: colors.white,
                 current: 'currentColor',
             },
+
+            backgroundImage: theme => ({
+                'map': "url('/images/Background.png')",
+               })
         },
     },
     variants: {
