@@ -10,21 +10,22 @@ module.exports = {
     theme: {
         fontFamily: {
             display: ['Uncial Antiqua', 'Open Sans', 'system-ui', 'sans-serif'],
-            body: ['Open Sans', 'system-ui', 'sans-serif'],
-        },
-        colors: {
-            primary: {
-                // TODO: Add light and dark versions
-                DEFAULT: '#FF3864',
-            },
-            secondary: {
-                DEFAULT: '#2D0D40',
-            },
-            transparent: 'transparent',
-            white: colors.white,
-            current: 'currentColor',
+            sans: ['Open Sans', 'system-ui', 'sans-serif'],
         },
         extend: {
+            colors: {
+                primary: {
+                    // TODO: Add light and dark versions
+                    DEFAULT: '#FF3864',
+                },
+                dark: {
+                    DEFAULT: '#2D0D40',
+                },
+                transparent: 'transparent',
+                white: colors.white,
+                current: 'currentColor',
+            },
+
             backgroundImage: theme => ({
                 'map': "linear-gradient(180deg, #2D0D40 0%, #FF3864 100%), url('/images/Background.png')",
                })
