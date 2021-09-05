@@ -12,8 +12,14 @@ const Home = () => {
 			</Head>
 			<Navbar />
 			<main>
-				<h1 className='text-primary'>Origin Stories Home</h1>
-				<p className='text-gray-800'>This page is about cool stuff</p>
+				<div>
+					<div className='bg-map h-48 pt-10'>
+						<h1 className='font-display text-5xl text-primary'>
+							Origin Stories Home
+						</h1>
+						<p className='font-sans text-base'>This page is about cool stuff</p>
+					</div>
+				</div>
 				<Card />
 			</main>
 			<Footer />
