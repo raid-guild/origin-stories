@@ -10,7 +10,7 @@ module.exports = {
     theme: {
         fontFamily: {
             display: ['Uncial Antiqua', 'Open Sans', 'system-ui', 'sans-serif'],
-            body: ['Open Sans', 'system-ui', 'sans-serif'],
+            sans: ['Open Sans', 'system-ui', 'sans-serif'],
         },
         extend: {
             colors: {
@@ -18,13 +18,14 @@ module.exports = {
                     // TODO: Add light and dark versions
                     DEFAULT: '#FF3864',
                 },
-                secondary: {
+                dark: {
                     DEFAULT: '#2D0D40',
                 },
                 transparent: 'transparent',
                 white: colors.white,
                 current: 'currentColor',
             },
+
             backgroundImage: theme => ({
                 'map': "url('/images/Background.png')",
                })
