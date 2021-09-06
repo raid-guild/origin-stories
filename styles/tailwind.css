@@ -3,20 +3,33 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        @apply text-white;
+    }
 	h1 {
-		@apply text-5xl font-display font-bold tracking-tight leading-snug text-white;
+        @apply text-5xl font-display font-bold tracking-tight leading-snug;
 	}
 	h2 {
-		@apply text-4xl font-display font-bold leading-snug text-white;
+        @apply text-4xl font-display font-bold leading-snug;
 	}
 	h3 {
-		@apply text-3xl font-display font-bold leading-snug text-white;
+        @apply text-3xl font-display font-bold leading-snug;
 	}
-	h6 {
-		@apply text-xl font-display font-bold leading-snug text-white;
-	}
-	p {
-		@apply font-sans text-lg leading-relaxed text-white tracking-wide;
+    h4 {
+        @apply text-xl font-sans font-bold leading-snug tracking-tight;
+    }
+
+    p,
+    blockquote {
+        @apply font-sans text-lg leading-relaxed tracking-wide font-normal;
+    }
+
+    blockquote {
+        @apply text-xl;
+    }
+
+    a {
+        @apply font-sans text-base leading-relaxed tracking-wide;
 	}
 	small {
 		@apply font-sans text-sm leading-relaxed text-white font-medium tracking-wide;
