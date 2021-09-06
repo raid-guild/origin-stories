@@ -9,7 +9,7 @@ const CardList = () => {
 					return (
 						<div
 							key={index}
-							className='max-w-sm bg-dark p-6 backdrop-blur rounded tracking-normal'>
+							className='max-w-sm h-[426px] bg-dark p-6 m-4 backdrop-blur rounded tracking-normal'>
 							<p>{data.quote}</p>
 							<div className='flex items-center justify-start space-x-2 mt-5'>
 								<div className='rounded-full bg-primary h-12 w-12 flex items-center justify-center'>
