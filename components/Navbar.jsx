@@ -1,18 +1,22 @@
-import Image from 'next/image'
-import rgLogo from '../public/images/raidguild_logo.svg'
+import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment } from 'react';
+import rgLogo from '../public/images/raidguild_logo.svg';
 
 const Navbar = () => {
 	return (
 		<Fragment>
-			<nav className='pt-[52px] pl-32 flex items-center justify-between h-24 px-8 pr-[110px]'>
+			<nav className='pt-[52px] px-[110px] flex items-center justify-between h-24'>
 				<Link href='/'>
-					<Image className='text-xl font-semibold border-r-2' src={rgLogo} alt="Raid Guild Logo" />
-						<div className='text-xl font-semibold border-r-2 border-white'>
-							Logo
-						</div>
-						<span className='font-medium'>Origins</span>
+					<a className='flex items-center space-x-2'>
+						<Image
+							className='text-xl font-semibold '
+							src={rgLogo}
+							alt='Raid Guild Logo'
+						/>
+						<span className='font-medium uppercase pl-2 border-l-2 border-white'>
+							Origins
+						</span>
 					</a>
 				</Link>
 				<div className='flex space-x-12'>

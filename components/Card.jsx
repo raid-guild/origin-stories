@@ -54,7 +54,7 @@ export const FeaturedCard = () => {
 				<div className='flex items-center justify-start space-x-4 mt-5'>
 					<div className='rounded-full bg-primary h-12 w-12 flex items-center justify-center'></div>
 					<div>
-						<h6>Jordan</h6>
+						<p className='card-user'>Jordan</p>
 						<small>@jordanlovesred</small>
 					</div>
 				</div>

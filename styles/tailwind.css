@@ -37,4 +37,15 @@
 	small {
 		@apply font-sans text-sm leading-relaxed text-white font-medium tracking-wide;
 	}
+
+	.card-user {
+		@apply font-display text-lg leading-relaxed tracking-wide font-semibold;
+	}
+
+	.featured-raider-card {
+		@apply max-w-md h-[398px] bg-dark p-8 m-4 bg-opacity-80 backdrop-blur shadow-2xl rounded tracking-normal ring ring-yellow-400 ring-inset;
+	}
+	.card {
+		@apply max-w-md h-[398px] bg-dark p-8 m-4 bg-opacity-80 backdrop-blur shadow-2xl rounded tracking-normal;
+	}
 }

@@ -1,4 +1,8 @@
+import { StarIcon } from '@heroicons/react/solid';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Fragment } from 'react/cjs/react.production.min';
+import profilePic from '../public/images/profile-photo.jpg';
 import dataList from '../utils/data';
 
 const CardList = () => {
@@ -10,23 +14,46 @@ const CardList = () => {
 						return (
 							<div
 								key={index}
-								className='max-w-md h-[398px] bg-dark p-6 m-4 backdrop-blur rounded tracking-normal'>
-								<p>{data.quote}</p>
-								<div className='flex items-center justify-start space-x-2 mt-5'>
-									<div className='rounded-full bg-primary h-12 w-12 flex items-center justify-center'>
-										{/* <Image layout='fill' src={data.picture} alt='User picture' /> */}
+								className={`card ${index === 0 ? 'featured-raider-card' : ''}`}>
+								<div
+									className={`grid ${
+										index === 0 ? 'grid-rows-5' : 'grid-rows-4'
+									} grid-flow-col gap-4 h-full`}>
+									{index === 0 ? (
+										<div className='flex justify-start items-center row-span-1 col-span-3'>
+											<StarIcon className='h-5 w-5 text-yellow-400 shadow-featured' />
+											<p className='text-yellow-400 font-semibold uppercase mb-2 ml-2'>
+												Featured Raider
+											</p>
+										</div>
+									) : null}
+									<p className='row-span-2 col-span-3'>{data.quote}</p>
+									<div className='flex items-center justify-start space-x-2 border-b-2 border-indigo-200 border-opacity-50 row-span-1 col-span-3'>
+										<div className='rounded-full bg-primary h-12 w-12 relative overflow-hidden'>
+											{index === 0 ? (
+												<Image
+													src={profilePic}
+													className='object-cover object-center'
+													layout='fill'
+													alt='Picture of the author'
+												/>
+											) : null}
+										</div>
+										<div>
+											<p className='card-user'>{data.name}</p>
+											<small>{data.username}</small>
+										</div>
 									</div>
-									<div>
-										<h6>{data.name}</h6>
-										<small>{data.username}</small>
-									</div>
+									<Link href={index === 0 ? '/origins/dekanbro' : '/'}>
+										<a className='w-full row-span-1 col-span-3'>
+											<button
+												type='button'
+												className='bg-primary hover:bg-pink-700 text-white font-medium py-2 px-4 max-h-12 rounded items-center w-full'>
+												Read my story
+											</button>
+										</a>
+									</Link>
 								</div>
-								<div className='border-b-2 my-8'></div>
-								<button
-									type='button'
-									className='bg-primary hover:bg-pink-700 text-white font-medium py-2 px-4 rounded items-center w-full'>
-									Read my story
-								</button>
 							</div>
 						);
 					})}

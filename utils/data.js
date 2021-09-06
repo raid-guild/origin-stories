@@ -1,10 +1,12 @@
 const dataList = [
 	{
 		picture: 'http://placehold.it/32x32',
-		name: 'Browning Chavez',
-		username: '@Rutledge',
-		quote:
-			'Pariatur ipsum quis ipsum laboris proident cillum reprehenderit ea magna. Nulla ea officia occaecat laborum commodo Lorem do voluptate mollit. Enim ipsum Lorem proident dolore Lorem.',
+		name: 'Dekan Brown',
+		username: '@dekanbro',
+		quote: `With DAOs, you work closely with someone and you get to see how
+			they conduct themselves... and maybe they&apos;re still
+			anonymous, but you learn to trust them and they build a
+			reputation with you`,
 	},
 	{
 		picture: 'http://placehold.it/32x32',
