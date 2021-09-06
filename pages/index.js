@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Fragment } from 'react';
-import CardList from '../components/CardList';
+import { FeaturedCard } from '../components/Card';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -20,7 +20,7 @@ const Home = () => {
 						<p className='font-sans text-base'>This page is about cool stuff</p>
 					</div>
 				</div>
-				<CardList />
+				<FeaturedCard />
 			</main>
 			<Footer />
 		</Fragment>

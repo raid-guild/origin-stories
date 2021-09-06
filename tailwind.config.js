@@ -9,6 +9,9 @@ module.exports = {
 			display: ['Uncial Antiqua', 'Open Sans', 'system-ui', 'sans-serif'],
 			sans: ['Open Sans', 'system-ui', 'sans-serif'],
 		},
+		boxShadow: {
+			featured: ' 0px 0px 30px 0px rgba(251,191,36,1)',
+		},
 		extend: {
 			colors: {
 				primary: {
