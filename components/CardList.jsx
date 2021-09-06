@@ -1,28 +1,33 @@
-import Image from 'next/image';
 import { Fragment } from 'react/cjs/react.production.min';
-import { dataList } from '../utils/data';
+import dataList from '../utils/data';
 
 const CardList = () => {
 	return (
 		<Fragment>
-			<div className='flex justify-between items-center flex-wrap'>
+			<div className='flex justify-evenly items-center flex-wrap'>
 				{dataList.map((data, index) => {
-					<div
-						key={index}
-						className='max-w-sm bg-white border-2 p-6 rounded tracking-normal'>
-						<p>{data.quote}</p>
-						<div className='flex items-center justify-start space-x-4 mt-5'>
-							<Image src={data.picture} alt='Picture of user' />
-							<div>
-								<p>{data.name}</p>
-								<small>{data.username}</small>
+					return (
+						<div
+							key={index}
+							className='max-w-sm bg-dark p-6 backdrop-blur rounded tracking-normal'>
+							<p>{data.quote}</p>
+							<div className='flex items-center justify-start space-x-2 mt-5'>
+								<div className='rounded-full bg-primary h-12 w-12 flex items-center justify-center'>
+									{/* <Image layout='fill' src={data.picture} alt='User picture' /> */}
+								</div>
+								<div>
+									<h6>{data.name}</h6>
+									<small>{data.username}</small>
+								</div>
 							</div>
+							<div className='border-b-2 my-8'></div>
+							<button
+								type='button'
+								className='bg-primary hover:bg-pink-700 text-white font-medium py-2 px-4 rounded items-center w-full'>
+								Read my story
+							</button>
 						</div>
-						<div className='border-b-2 my-8'></div>
-						<button className='bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded items-center w-full'>
-							Read my story
-						</button>
-					</div>;
+					);
 				})}
 			</div>
 		</Fragment>

@@ -12,17 +12,17 @@ const Navbar = () => {
 				</a>
 				<div className='flex space-x-12'>
 					<a
-						className='font-sans text-base hover:border-b-2 hover:pb-1 hover:border-red-700'
+						className='font-sans text-base pb-1 border-b-2 border-opacity-0 hover:border-b-2 hover:border-red-700 hover:border-opacity-100'
 						href='#'>
 						Home
 					</a>
 					<a
-						className='font-sans text-base hover:border-b-2 hover:pb-1 hover:border-red-700'
-						href='#'>
+						className='font-sans text-base pb-1 border-b-2 border-opacity-0 hover:border-b-2 hover:border-red-700 hover:border-opacity-100'
+						href='/origins/dekanbro'>
 						Origin Stories
 					</a>
 					<a
-						className='font-sans text-base hover:border-b-2 hover:pb-1 hover:border-red-700'
+						className='font-sans text-base pb-1 border-b-2 border-opacity-0 hover:border-b-2 hover:border-red-700 hover:border-opacity-100'
 						href='#'>
 						Freelancer Tips
 					</a>

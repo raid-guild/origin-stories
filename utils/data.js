@@ -1,4 +1,4 @@
-export const dataList = [
+const dataList = [
 	{
 		picture: 'http://placehold.it/32x32',
 		name: 'Browning Chavez',
@@ -42,3 +42,5 @@ export const dataList = [
 			'Et duis velit culpa sint labore do. Anim excepteur non ad esse aute cupidatat nisi commodo irure voluptate. Anim dolore ut reprehenderit nostrud non et et est.',
 	},
 ];
+
+export default dataList;
