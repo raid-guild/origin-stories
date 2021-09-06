@@ -20,7 +20,7 @@ module.exports = {
                 },
                 dark: {
                     DEFAULT: '#2D0D40',
-                    darker: '#19101F',
+                    darker: '#170422',
                 },
                 transparent: 'transparent',
                 white: colors.white,
@@ -52,6 +52,12 @@ module.exports = {
                         },
                         h4: {
                             color: colors.white,
+                        },
+                        'figure figcaption': {
+                            color: theme('colors.gray.400'),
+                        },
+                        '.lead': {
+                            color: theme('colors.primary.DEFAULT'),
                         },
                     },
                 },

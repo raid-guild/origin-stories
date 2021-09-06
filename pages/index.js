@@ -4,26 +4,28 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 const Home = () => {
-	return (
-		<Fragment>
-			<Head>
-				<title>Raid Guild Origins</title>
-			</Head>
-			<Navbar />
-			<main>
+    return (
+        <Fragment>
+            <Head>
+                <title>Raid Guild Origins</title>
+            </Head>
+            <Navbar />
+            <main>
                 <div>
-                    <div className='bg-map h-48 pt-10'>
-                        <h1 className='font-display text-5xl text-primary'>
+                    <div className="bg-map h-48 pt-10">
+                        <h1 className="font-display text-5xl text-primary">
                             Origin Stories Home
                         </h1>
-                        <p className='font-sans text-base'>This page is about cool stuff</p>
+                        <p className="font-sans text-base">
+                            This page is about cool stuff
+                        </p>
                     </div>
                     <div></div>
                 </div>
-				<Footer />
-			</main>
-		</Fragment>
-	);
+                <Footer />
+            </main>
+        </Fragment>
+    );
 };
 
 export default Home;

@@ -12,9 +12,11 @@
     h2 {
         @apply text-4xl font-display font-bold leading-snug;
     }
+
     h3 {
         @apply text-3xl font-display font-bold leading-snug;
     }
+
     h4 {
         @apply text-xl font-sans font-bold leading-snug tracking-tight;
     }
@@ -30,5 +32,9 @@
 
     a {
         @apply font-sans text-base leading-relaxed tracking-wide;
+    }
+
+    article p {
+        @apply leading-8 tracking-normal;
     }
 }
