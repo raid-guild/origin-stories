@@ -8,6 +8,7 @@ import Header from "../../components/Header";
 
 import profilePic from "../../public/images/profile-photo.jpg";
 import mapImage from "../../public/images/map.png";
+import full_header from "../../public/images/full_header.png"
 
 const Article = () => {
   return (
@@ -17,7 +18,12 @@ const Article = () => {
       </Head>
       <div className="bg-dark-darker">
         <Header>
-            <h1>Welcome yall!</h1>
+          <div className="px-32">
+            <Image 
+									className="object-cover object-center absolute z-50" 
+									src={full_header} 
+									alt="Dekanbro header" />
+          </div>
         </Header>
         <div className="grid grid-cols-3 xl:px-28 lg:px-24 md:px-20 gap-16 pt-8 h-full -mt-48">
           <main className="col-span-2 z-[999]">
