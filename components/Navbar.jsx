@@ -6,7 +6,7 @@ import Link from 'next/link';
 const Navbar = () => {
 	return (
 		<Fragment>
-			<nav className='flex items-center justify-between h-24 px-8'>
+			<nav className='pt-[52px] pl-32 flex items-center justify-between h-24 px-8 pr-[110px]'>
 				<a className='grid grid-cols-2 items-center space-x-1' href='#'>
 					<Image className='text-xl font-semibold border-r-2' src={rgLogo} alt="Raid Guild Logo" />
 					<p className='font-medium'>Origins</p>
