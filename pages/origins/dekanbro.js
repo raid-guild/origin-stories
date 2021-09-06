@@ -18,14 +18,14 @@ const Article = () => {
       </Head>
       <div className="bg-dark-darker">
         <Header>
-          <div className="px-32">
+          <div className="px-32 pt-24">
             <Image 
 									className="object-cover object-center absolute z-50" 
 									src={full_header} 
 									alt="Dekanbro header" />
           </div>
         </Header>
-        <div className="grid grid-cols-3 xl:px-28 lg:px-24 md:px-20 gap-16 pt-8 h-full -mt-48">
+        <div className="grid grid-cols-3 xl:px-28 lg:px-24 md:px-20 gap-16 pt-48 h-full -mt-48">
           <main className="col-span-2 z-[999]">
             <h1 className="font-sans">The Origins of Dekan Brown</h1>
             <p className="text-base">
