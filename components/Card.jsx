@@ -47,8 +47,9 @@ export const FeaturedCard = () => {
 				<p>
 					&quot;I would count the permissioned DAOs. I own tokens in other
 					token-multisig-snapshot DAOs and I vote in them sometimes, but I
-					wouldn't necessarily list all of those. The main DAOs that I'm active
-					in are MetaCartel, RaidGuild, DAOhaus, and UberHaus.&quot;
+					wouldn&apos;t necessarily list all of those. The main DAOs that
+					I&paos;m active in are MetaCartel, RaidGuild, DAOhaus, and
+					UberHaus.&quot;
 				</p>
 				<div className='flex items-center justify-start space-x-4 mt-5'>
 					<div className='rounded-full bg-primary h-12 w-12 flex items-center justify-center'></div>
