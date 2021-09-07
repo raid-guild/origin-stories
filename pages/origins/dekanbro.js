@@ -14,7 +14,7 @@ const Article = () => {
 			</Head>
 			<div className='bg-dark-darker'>
 				<Header>
-          <div className="px-32 pt-24">
+					<div className='px-32 pt-24'>
 						<Image
 							className='object-cover object-center absolute z-50'
 							src={full_header}
@@ -22,7 +22,7 @@ const Article = () => {
 						/>
 					</div>
 				</Header>
-        <div className="grid grid-cols-3 xl:px-28 lg:px-24 md:px-20 gap-16 pt-48 h-full -mt-48">
+				<div className='grid grid-cols-3 xl:px-28 lg:px-24 md:px-20 gap-16 pt-24 h-full mt-48'>
 					<main className='col-span-2 z-[999]'>
 						<h1 className='font-sans'>The Origins of Dekan Brown</h1>
 						<p className='text-base'>
@@ -173,7 +173,7 @@ const Article = () => {
 								</p>
 							</div>
 
-							<p className='text-sm opacity-70 leading-6'>
+							<p className='text-sm opacity-70 leading-6 line-clamp-5'>
 								With DAOs, you work closely with someone and you get to see how
 								they conduct themselves... and maybe they&apos;re still
 								anonymous, but you learn to trust them and they build a

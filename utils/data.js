@@ -4,7 +4,7 @@ const dataList = [
 		name: 'Dekan Brown',
 		username: '@dekanbro',
 		quote: `With DAOs, you work closely with someone and you get to see how
-			they conduct themselves... and maybe they&apos;re still
+			they conduct themselves... and maybe they're still
 			anonymous, but you learn to trust them and they build a
 			reputation with you`,
 	},

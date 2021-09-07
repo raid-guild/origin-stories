@@ -27,7 +27,9 @@ const CardList = () => {
 											</p>
 										</div>
 									) : null}
-									<p className='row-span-2 col-span-3'>{data.quote}</p>
+									<p className='row-span-2 col-span-3 line-clamp-5'>
+										&quot;{data.quote}&quot;
+									</p>
 									<div className='flex items-center justify-start space-x-2 border-b-2 border-indigo-200 border-opacity-50 row-span-1 col-span-3'>
 										<div className='rounded-full bg-primary h-12 w-12 relative overflow-hidden'>
 											{index === 0 ? (
@@ -48,7 +50,7 @@ const CardList = () => {
 										<a className='w-full row-span-1 col-span-3'>
 											<button
 												type='button'
-												className='bg-primary hover:bg-pink-700 text-white font-medium py-2 px-4 max-h-12 rounded items-center w-full'>
+												className='bg-primary hover:bg-pink-700 text-white font-medium py-2 px-4 h-14 rounded items-center w-full'>
 												Read my story
 											</button>
 										</a>
