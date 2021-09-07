@@ -20,10 +20,13 @@
     h4 {
         @apply text-xl font-sans font-bold leading-snug tracking-tight;
     }
+    h6 {
+        @apply text-lg font-display font-sans font-bold leading-snug tracking-tight;
+    }
 
     p,
     blockquote {
-        @apply font-sans text-lg leading-relaxed tracking-wide font-normal;
+        @apply font-sans text-lg leading-snug tracking-wide font-normal;
     }
 
     blockquote {
@@ -36,5 +39,20 @@
 
     article p {
         @apply leading-8 tracking-normal;
+    }
+
+    small {
+        @apply font-sans text-sm leading-relaxed text-white font-medium tracking-wide;
+    }
+
+    .card-user {
+        @apply font-display text-lg leading-relaxed tracking-wide font-semibold;
+    }
+
+    .featured-raider-card {
+        @apply max-w-md h-[400px] bg-dark p-8 m-4 bg-opacity-80 backdrop-blur shadow-2xl rounded tracking-normal ring ring-yellow-400 ring-inset;
+    }
+    .card {
+        @apply max-w-md  h-[400px] bg-dark p-8 m-4 bg-opacity-80 backdrop-blur shadow-2xl rounded tracking-normal;
     }
 }

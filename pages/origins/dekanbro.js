@@ -1,12 +1,10 @@
 // For MVP purposes only!!!
-import Image from 'next/image';
 import Head from 'next/head';
+import Image from 'next/image';
 import { Fragment } from 'react';
-
-import Navbar from '../../components/Navbar';
-
+import Header from '../../components/Header';
+import full_header from '../../public/images/full_header.png';
 import profilePic from '../../public/images/profile-photo.jpg';
-import mapImage from '../../public/images/map.png';
 
 const Article = () => {
     return (
@@ -15,19 +13,15 @@ const Article = () => {
                 <title>Raid Guid Origins | Dekan Brown</title>
             </Head>
             <div className="bg-dark-darker">
-                <div className="col-span-3 lg:h-[750px] relative">
-                    <Image
-                        src={mapImage}
-                        className="object-cover object-bottom absolute inset-0"
-                        layout="fill"
-                        draggable="false"
-                        alt="Picture of the author"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-dark via-primary opacity-40"></div>
-                    <div className="relative z-10">
-                        <Navbar />
+                <Header>
+                    <div className="px-32 pt-24">
+                        <Image
+                            className="object-cover object-center absolute z-50"
+                            src={full_header}
+                            alt="Dekanbro header"
+                        />
                     </div>
-                </div>
+                </Header>
                 <div className="grid grid-cols-3 xl:px-28 lg:px-24 md:px-20 gap-16 pt-8 h-full -mt-48">
                     <main className="col-span-2 z-[999]">
                         <h1 className="font-sans">
@@ -239,7 +233,7 @@ const Article = () => {
                     </main>
 
                     <aside className="col-span-1 h-screen sticky top-4">
-                        <div className="rounded-md bg-white bg-opacity-10 backdrop-filter backdrop-blur-xl p-6 shadow-lg flex flex-col">
+                        <div className="rounded-md bg-white bg-opacity-10 ring-2 ring-gray-400 ring-inset backdrop-filter backdrop-blur-xl p-6 shadow-lg flex flex-col">
                             <div className="flex justify-between items-center mb-4">
                                 <div className="rounded-full border-solid border-white border-opacity-50 border-2 relative h-20 w-20 overflow-hidden">
                                     <Image
@@ -273,7 +267,7 @@ const Article = () => {
                                 </p>
                             </div>
 
-                            <p className="text-sm opacity-70 leading-6">
+                            <p className="text-sm opacity-70 leading-6 line-clamp-5">
                                 With DAOs, you work closely with someone and you
                                 get to see how they conduct themselves... and
                                 maybe they&apos;re still anonymous, but you

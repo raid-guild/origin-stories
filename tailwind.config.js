@@ -13,6 +13,15 @@ module.exports = {
             sans: ['Open Sans', 'system-ui', 'sans-serif'],
         },
         extend: {
+            lineClamp: {
+                7: '7',
+                8: '8',
+                9: '9',
+                10: '10',
+            },
+            boxShadow: {
+                featured: ' 0px 0px 8px 0px rgba(251,191,36,1)',
+            },
             colors: {
                 primary: {
                     // TODO: Add light and dark versions
@@ -67,5 +76,8 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [require('@tailwindcss/typography')],
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/line-clamp'),
+    ],
 };

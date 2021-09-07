@@ -1,30 +1,40 @@
-import { Fragment } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
+import { Fragment } from 'react';
+import rgLogo from '../public/images/raidguild_logo.svg';
 
 const Navbar = () => {
 	return (
 		<Fragment>
-			<nav className='flex items-center justify-between h-24 px-8'>
-				<a className='grid grid-cols-2 items-center space-x-1' href='#'>
-					<div className='text-xl font-semibold border-r-2'>Logo</div>
-					<p className='font-medium'>Origins</p>
-				</a>
+			<nav className='pt-[52px] px-[110px] flex items-center justify-between h-24'>
+				<Link href='/'>
+					<a className='flex items-center space-x-2'>
+						<Image
+							className='text-xl font-semibold '
+							src={rgLogo}
+							alt='Raid Guild Logo'
+						/>
+						<span className='font-medium uppercase pl-2 border-l-2 border-white'>
+							Origins
+						</span>
+					</a>
+				</Link>
 				<div className='flex space-x-12'>
-					<Link
-						className='border-solid border-b-2 pb-1 border-transparent hover:border-white'
-						href='/'>
-						Home
+					<Link href='/'>
+						<a className='font-sans text-base pb-1 border-b-2 border-opacity-0 hover:border-b-2 hover:border-red-700 hover:border-opacity-100'>
+							Home
+						</a>
 					</Link>
-					<a
-						className='font-sans text-base hover:border-b-2 hover:pb-1'
-						href='#'>
-						Origin Stories
-					</a>
-					<a
-						className='font-sans text-base hover:border-b-2 hover:pb-1'
-						href='#'>
-						Freelancer Tips
-					</a>
+					<Link href='/origins/dekanbro'>
+						<a className='font-sans text-base pb-1 border-b-2 border-opacity-0 hover:border-b-2 hover:border-red-700 hover:border-opacity-100'>
+							Origin Stories
+						</a>
+					</Link>
+					<Link href='/'>
+						<a className='font-sans text-base pb-1 border-b-2 border-opacity-0 hover:border-b-2 hover:border-red-700 hover:border-opacity-100'>
+							Freelancer Tips
+						</a>
+					</Link>
 				</div>
 			</nav>
 		</Fragment>
