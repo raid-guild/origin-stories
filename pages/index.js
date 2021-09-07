@@ -21,7 +21,7 @@ const Home = () => {
                                 <h1 className="font-display text-5xl w-[36rem]">
                                     Every Raider Comes From Somewhere
                                 </h1>
-                                <p className="pt-4 leading-7 w-[36rem]">
+                                <p className="pt-6 leading-7 w-[36rem]">
                                     Raiders come from all over the globe, with
                                     different backgrounds and perspectives. What
                                     were they doing before joining the Guild?
