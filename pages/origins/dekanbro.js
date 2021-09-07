@@ -25,7 +25,7 @@ const Article = () => {
 									alt="Dekanbro header" />
           </div>
         </Header>
-        <div className="grid grid-cols-3 xl:px-28 lg:px-24 md:px-20 gap-16 pt-48 h-full -mt-48">
+        <div className="grid grid-cols-3 xl:px-44 lg:px-24 md:px-20 gap-16 pt-48 h-full -mt-48">
           <main className="col-span-2 z-[999]">
             <h1 className="font-sans">The Origins of Dekan Brown</h1>
             <p className="text-base">
