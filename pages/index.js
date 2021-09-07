@@ -13,15 +13,15 @@ const Home = () => {
             <Head>
                 <title>Raid Guild Origins</title>
             </Head>
-            <main className="bg-primary">
+            <main className="bg-dark-darker">
                 <Header>
                     <div className="px-32">
-                        <div className="flex justify-around content-center pt-[148px]">
+                        <div className="flex justify-around content-center pt-24">
                             <div>
                                 <h1 className="font-display text-5xl w-[36rem]">
                                     Every Raider Comes From Somewhere
                                 </h1>
-                                <p className="pt-4 leading-7 w-[525px]">
+                                <p className="pt-4 leading-7 w-[36rem]">
                                     Raiders come from all over the globe, with
                                     different backgrounds and perspectives. What
                                     were they doing before joining the Guild?
@@ -31,7 +31,7 @@ const Home = () => {
                                 </p>
                             </div>
                             <div className="flex">
-                                <div className="-m-10 w-64 relative h-full">
+                                <div className="w-64 relative h-full">
                                     <Image
                                         className="object-cover object-center absolute inset-0 z-50"
                                         src={clicksWorld}
@@ -49,7 +49,9 @@ const Home = () => {
                         </div>
                     </div>
                 </Header>
-                <CardList />
+                <div className="container -mt-16 mb-10 px-32">
+                    <CardList />
+                </div>
                 <Footer />
             </main>
         </Fragment>

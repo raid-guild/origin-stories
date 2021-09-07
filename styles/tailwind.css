@@ -4,7 +4,7 @@
 
 @layer base {
     html {
-        @apply text-white;
+        @apply text-white m-0 p-0;
     }
     h1 {
         @apply text-5xl font-display font-bold tracking-tight leading-snug;
@@ -29,10 +29,6 @@
         @apply font-sans text-lg leading-snug tracking-wide font-normal;
     }
 
-    blockquote {
-        @apply text-xl;
-    }
-
     a {
         @apply font-sans text-base leading-relaxed tracking-wide;
     }
@@ -50,9 +46,9 @@
     }
 
     .featured-raider-card {
-        @apply max-w-md h-[400px] bg-dark p-8 m-4 bg-opacity-80 backdrop-blur shadow-2xl rounded tracking-normal ring ring-yellow-400 ring-inset;
+        @apply ring ring-yellow-400 ring-inset;
     }
     .card {
-        @apply max-w-md  h-[400px] bg-dark p-8 m-4 bg-opacity-80 backdrop-blur shadow-2xl rounded tracking-normal;
+        @apply max-w-sm h-96 bg-dark p-8 m-4 bg-opacity-80 backdrop-blur shadow-2xl rounded tracking-normal flex flex-col;
     }
 }

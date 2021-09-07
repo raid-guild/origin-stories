@@ -2,7 +2,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { Fragment } from 'react';
+
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
 import full_header from '../../public/images/full_header.png';
 import profilePic from '../../public/images/profile-photo.jpg';
 
@@ -14,7 +17,7 @@ const Article = () => {
             </Head>
             <div className="bg-dark-darker">
                 <Header>
-                    <div className="px-32 pt-24">
+                    <div className="px-32 pt-16">
                         <Image
                             className="object-cover object-center absolute z-50"
                             src={full_header}
@@ -22,7 +25,7 @@ const Article = () => {
                         />
                     </div>
                 </Header>
-                <div className="grid grid-cols-3 xl:px-28 lg:px-24 md:px-20 gap-16 pt-8 h-full -mt-48">
+                <div className="grid grid-cols-3 xl:px-28 lg:px-24 md:px-20 gap-16 pt-8 h-full">
                     <main className="col-span-2 z-[999]">
                         <h1 className="font-sans">
                             The Origins of Dekan Brown
@@ -277,6 +280,7 @@ const Article = () => {
                         </div>
                     </aside>
                 </div>
+                <Footer />
             </div>
         </Fragment>
     );

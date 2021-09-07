@@ -19,7 +19,7 @@ module.exports = {
                 9: '9',
                 10: '10',
             },
-            boxShadow: {
+            dropShadow: {
                 featured: ' 0px 0px 8px 0px rgba(251,191,36,1)',
             },
             colors: {
