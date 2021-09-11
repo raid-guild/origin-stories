@@ -26,6 +26,7 @@ module.exports = {
                 primary: {
                     // TODO: Add light and dark versions
                     DEFAULT: '#FF3864',
+                    dark: '#DB2B52',
                 },
                 dark: {
                     DEFAULT: '#2D0D40',
@@ -35,9 +36,6 @@ module.exports = {
                 white: colors.white,
                 current: 'currentColor',
             },
-            backgroundImage: (theme) => ({
-                map: "url('/images/map.png')",
-            }),
             // refer to: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
             typography: (theme) => ({
                 DEFAULT: {
