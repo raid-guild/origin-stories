@@ -5,15 +5,19 @@
 @layer base {
     html {
         @apply text-white m-0 p-0 text-sm;
+        scroll-behavior: smooth;
     }
+
     @media (min-width: 420px) {
         html {
             font-size: 16px;
         }
     }
+
     h1 {
         @apply text-5xl font-display font-bold tracking-tight leading-snug;
     }
+
     h2 {
         @apply text-4xl font-display font-bold leading-snug;
     }

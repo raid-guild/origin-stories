@@ -1,31 +1,55 @@
-import { Fragment } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import rgLogo from '../public/images/raidguild_logo.svg';
 
+const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'Origin Stories', href: '/origins/dekanbro', current: false },
+    { name: 'Freelancer Tips', href: '/', current: false },
+];
+
+const combineClasses = (...classes) => classes.filter(Boolean).join(' ');
+
 const Navbar = () => {
+    const [navOpen, setNavOpen] = useState(false);
+
+    const toggleNav = () => setNavOpen(!navOpen);
+
     return (
-        <Fragment>
-            <nav className="flex flex-col h-24 p-4">
-                <div className="flex flex-row justify-between items-center">
-                    <Link href="/">
-                        <a className="flex items-center space-x-2">
-                            <div className="h-14 w-24 relative">
-                                <Image
-                                    src={rgLogo}
-                                    alt="Raid Guild Logo"
-                                    layout="fill"
-                                />
-                            </div>
-                            <span className="font-medium text-xs tracking-widest border-l-2 border-white uppercase pl-2">
-                                Origins
-                            </span>
-                        </a>
-                    </Link>
+        <nav className="flex flex-col h-24 p-4">
+            <div className="flex flex-row justify-between items-center">
+                <Link href="/">
+                    <a className="flex items-center space-x-2">
+                        <div className="h-14 w-24 relative">
+                            <Image
+                                src={rgLogo}
+                                alt="Raid Guild Logo"
+                                layout="fill"
+                            />
+                        </div>
+                        <span className="font-medium text-xs tracking-widest border-l-2 border-white uppercase pl-2">
+                            Origins
+                        </span>
+                    </a>
+                </Link>
+
+                <button
+                    type="button"
+                    onClick={toggleNav}
+                    className={combineClasses(
+                        navOpen ? 'bg-opacity-100' : 'bg-opacity-30',
+                        'px-4 py-2 md:hidden rounded-lg bg-dark-darker'
+                    )}
+                >
+                    <span className="sr-only">Open main menu</span>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-8 w-8"
+                        className={combineClasses(
+                            navOpen ? 'opacity-0 hidden' : 'opacity-100 block',
+                            'h-6 w-6 transition-all duration-200'
+                        )}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -37,34 +61,59 @@ const Navbar = () => {
                             d="M4 6h16M4 12h16M4 18h16"
                         />
                     </svg>
-                </div>
-                <div className="flex flex-col bg-dark bg-opacity-60 rounded-md justify-around shadow-sm">
-                    <ul className="list-none h-full">
-                        <Link href="/" passHref>
-                            <li className="transition-all ease-out duration-300 active:bg-primary hover:bg-primary hover:bg-opacity-50 hover:cursor-pointer p-4 rounded-t-md">
-                                <a className="transition ease-out duration-200 font-sans text-base border-b-2 border-transparent hover:border-b-2 hover:border-red-700">
-                                    Home
-                                </a>
-                            </li>
-                        </Link>
-                        <Link href="/origins/dekanbro" passHref>
-                            <li className="transition-all ease-out duration-300 active:bg-primary hover:bg-primary hover:bg-opacity-50 hover:cursor-pointer p-4">
-                                <a className="transition ease-out duration-200 font-sans text-base pb-2 mb-2 border-b-2 border-transparent hover:border-b-2 hover:border-red-700">
-                                    Origin Stories
-                                </a>
-                            </li>
-                        </Link>
-                        <Link href="/" passHref>
-                            <li className="transition-all ease-out duration-300 active:bg-primary hover:bg-primary hover:bg-opacity-50 hover:cursor-pointer p-4 rounded-b-md">
-                                <a className="transition ease-out duration-200 font-sans text-base pb-1 mb-2 border-b-2 border-transparent hover:border-b-2 hover:border-red-700">
-                                    Freelancer Tips
-                                </a>
-                            </li>
-                        </Link>
-                    </ul>
-                </div>
-            </nav>
-        </Fragment>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className={combineClasses(
+                            navOpen
+                                ? 'opacity-100 block rotate-0'
+                                : 'opacity-0 hidden rotate--45',
+                            'h-6 w-6 transition-all duration-500'
+                        )}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            {/* Mobile nav */}
+            <ul
+                className={combineClasses(
+                    navOpen
+                        ? 'visible opacity-100 translate-y-4 translate-x-0'
+                        : 'invisible opacity-0 translate-y-0 translate-x-1',
+                    'relative list-none transition-all duration-300 h-auto flex flex-col bg-dark rounded-md justify-around shadow-md z-10'
+                )}
+            >
+                {navigation.map((navItem, index) => (
+                    <Link href={navItem.href} key={navItem.name} passHref>
+                        <li
+                            className={combineClasses(
+                                navItem.current
+                                    ? 'bg-dark-darker'
+                                    : 'text-white text-opacity-70',
+                                index === 0
+                                    ? 'rounded-t-md'
+                                    : index === navigation.length - 1
+                                    ? 'rounded-b-md'
+                                    : '',
+                                navOpen ? 'opacity-100' : 'opacity-0',
+                                'transition-all ease-in-out duration-200 active:bg-primary p-4'
+                            )}
+                        >
+                            {navItem.name}
+                        </li>
+                    </Link>
+                ))}
+            </ul>
+        </nav>
     );
 };
 
