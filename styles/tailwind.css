@@ -4,7 +4,12 @@
 
 @layer base {
     html {
-        @apply text-white m-0 p-0;
+        @apply text-white m-0 p-0 text-sm;
+    }
+    @media (min-width: 420px) {
+        html {
+            font-size: 16px;
+        }
     }
     h1 {
         @apply text-5xl font-display font-bold tracking-tight leading-snug;
@@ -21,7 +26,7 @@
         @apply text-xl font-sans font-bold leading-snug tracking-tight;
     }
     h6 {
-        @apply text-lg font-display font-sans font-bold leading-snug tracking-tight;
+        @apply text-lg font-sans font-bold leading-snug tracking-tight;
     }
 
     p,

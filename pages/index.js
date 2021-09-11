@@ -1,9 +1,11 @@
+import { Fragment } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { Fragment } from 'react';
+
 import CardList from '../components/CardList';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+
 import clicksWorld from '../public/images/clicks_world.png';
 import handHeart from '../public/images/hand_heart.png';
 
@@ -16,7 +18,7 @@ const Home = () => {
             <main className="bg-dark-darker">
                 <Header>
                     <div className="px-32">
-                        <div className="flex justify-around content-center pt-24">
+                        <div className="flex lg:flex-row flex-col justify-around content-center pt-24">
                             <div>
                                 <h1 className="font-display text-5xl w-[36rem]">
                                     Every Raider Comes From Somewhere
