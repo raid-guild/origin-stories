@@ -19,7 +19,7 @@ const Header = () => {
 	const toggleNav = () => setNavOpen(!navOpen);
 
 	return (
-		<nav className='flex flex-col md:flex-row md:justify-between h-24 px-6 pt-4 w-vw'>
+		<nav className='flex flex-col md:flex-row md:justify-between h-24 px-6 md:px-24 pt-4 w-vw'>
 			<div className='flex flex-row justify-between items-center'>
 				<Link href='/'>
 					<a className='flex items-center space-x-2'>

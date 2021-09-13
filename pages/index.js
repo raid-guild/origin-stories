@@ -18,7 +18,7 @@ const Home = () => {
 				<div className='h-[650px] relative'>
 					<div className='relative z-10'>
 						<Header />
-						<div className='flex flex-col md:flex-row md:justify-between px-6 md:pt-24'>
+						<div className='flex flex-col md:flex-row md:justify-between px-6 md:px-24 md:pt-24'>
 							<div>
 								<h1 className='font-display text-5xl mt-10 md:mt-0 md:w-[36rem]'>
 									Every Raider Comes From Somewhere
@@ -63,7 +63,7 @@ const Home = () => {
 				</div>
 
 				{/* Cards */}
-				<div className='container mb-10 px-6'>
+				<div className='container md:mx-auto mb-10 px-6'>
 					<CardList />
 				</div>
 				<Footer />
