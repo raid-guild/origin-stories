@@ -25,8 +25,8 @@ export default function Article({
             </Head>
             <div className="bg-dark-darker">
                 <Header />
-                <div className="px-32 py-8">
-                    <div className="h-96 relative">
+                <div className="px-12 py-8">
+                    <div className="h-40 md:h-96 relative">
                         <Image
                             className="object-cover object-center"
                             src={header}
@@ -35,8 +35,8 @@ export default function Article({
                         />
                     </div>
                 </div>
-                <div className="grid grid-cols-3 xl:px-28 lg:px-24 md:px-20 gap-16 pt-8 h-full">
-                    <main className="col-span-2 z-[999]">
+                <div className="grid grid-cols-3 md:px-20 lg:px-24 xl:px-28 gap-16 pt-8 h-full">
+                    <main className="col-span-3 z-[999] px-12">
                         <h1 className="font-sans">The Origins of {name}</h1>
                         <p className="text-base">
                             <span className="opacity-80">Interviewed by </span>
@@ -65,7 +65,7 @@ export default function Article({
                         </article>
                     </main>
 
-                    <aside className="col-span-1 h-screen sticky top-4">
+                    {/* <aside className="col-span-1 h-screen sticky top-4">
                         <div className="rounded-md bg-white bg-opacity-10 ring-2 ring-gray-400 ring-inset backdrop-filter backdrop-blur-xl p-6 shadow-lg flex flex-col">
                             <div className="flex justify-between items-center mb-4">
                                 <div className="rounded-full border-solid border-white border-opacity-50 border-2 relative h-20 w-20 overflow-hidden">
@@ -108,7 +108,7 @@ export default function Article({
                                 with you
                             </p>
                         </div>
-                    </aside>
+                    </aside> */}
                 </div>
                 <Footer />
             </div>
