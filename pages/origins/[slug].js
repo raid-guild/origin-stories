@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import { getAllStories } from '../../utils/data';
-
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
-// import headerImg from '../../public/images/story/@dekanbro.png';
+
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+import { getAllStories } from '../../utils/data';
 
 export default function Article({
     name,
@@ -24,16 +24,21 @@ export default function Article({
                 <title>Raid Guid Origins | {name}</title>
             </Head>
             <div className="bg-dark-darker">
-                <Header />
-                <div className="px-12 py-8">
-                    <div className="h-40 md:h-96 relative">
-                        <Image
-                            className="object-cover object-center"
-                            src={header}
-                            alt={name}
-                            layout="fill"
-                        />
+                <div className="h-[650px] relative">
+                    <div className="relative z-10">
+                        <Header />
+                        <div className="px-12 py-8">
+                            <div className="h-40 md:h-[450px] relative radius-2">
+                                <Image
+                                    className="object-cover object-center"
+                                    src={header}
+                                    alt={name}
+                                    layout="fill"
+                                />
+                            </div>
+                        </div>
                     </div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-dark via-primary opacity-80 z-0"></div>
                 </div>
                 <div className="grid grid-cols-3 md:px-20 lg:px-24 xl:px-28 gap-16 pt-8 h-full">
                     <main className="col-span-3 z-[999] px-12">
@@ -45,7 +50,7 @@ export default function Article({
                             </span>
                         </p>
 
-                        <div className="py-4 w-1/2">
+                        {/* <div className="py-4 w-1/2">
                             <p>Listen the episode 👂</p>
                             <div className="flex justify-between text-sm text-grey-darker">
                                 <p>0:42</p>
@@ -58,7 +63,7 @@ export default function Article({
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         <article className="prose prose-lg my-8 font-sans">
                             <MDXRemote {...content} />
@@ -119,7 +124,6 @@ export default function Article({
 export async function getStaticProps(context) {
     const { params } = context;
     const allStories = getAllStories();
-    // console.log(allStories);
 
     const { data, content } = allStories.find(
         (story) => story.slug === params.slug

@@ -1,11 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-// import { Fragment } from 'react';
-// import profilePic from '../public/images/profile-photo.jpg'
-
 export default function CardList({ stories }) {
-    console.log(stories);
     return (
         <>
             <div className="flex justify-evenly items-center flex-wrap">

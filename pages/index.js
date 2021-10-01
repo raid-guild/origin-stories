@@ -1,17 +1,19 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { Fragment } from 'react';
+
 import CardList from '../components/CardList';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+
 import clicksWorld from '../public/images/clicks_world.png';
 import handHeart from '../public/images/hand_heart.png';
 import mapImage from '../public/images/map.png';
+
 import { getAllStories } from '../utils/data';
 
 const Home = ({ stories }) => {
     return (
-        <Fragment>
+        <>
             <Head>
                 <title>Raid Guild Origins</title>
             </Head>
@@ -70,7 +72,7 @@ const Home = ({ stories }) => {
                 </div>
                 <Footer />
             </div>
-        </Fragment>
+        </>
     );
 };
 
