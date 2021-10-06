@@ -26,6 +26,7 @@ module.exports = {
                 primary: {
                     // TODO: Add light and dark versions
                     DEFAULT: '#FF3864',
+                    dark: '#DB2B52',
                 },
                 dark: {
                     DEFAULT: '#2D0D40',
@@ -35,18 +36,15 @@ module.exports = {
                 white: colors.white,
                 current: 'currentColor',
             },
-            backgroundImage: (theme) => ({
-                map: "url('/images/map.png')",
-            }),
             // refer to: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
-                        color: '#fff',
+                        color: theme('colors.white'),
                         fontSize: '1.25em',
                         blockquote: {
                             borderLeftColor: theme('colors.primary.DEFAULT'),
-                            color: colors.gray[200],
+                            color: colors.gray[300],
                             fontWeight: '600',
                         },
                         a: {
@@ -56,14 +54,32 @@ module.exports = {
                                 cursor: 'pointer',
                             },
                         },
+                        code: {
+                            color: colors.gray[300],
+                        },
                         strong: {
                             color: theme('colors.white'),
                         },
-                        h4: {
-                            color: colors.white,
-                        },
                         'figure figcaption': {
                             color: theme('colors.gray.400'),
+                        },
+                        h1: {
+                            color: theme('colors.white'),
+                        },
+                        h2: {
+                            color: theme('colors.white'),
+                        },
+                        h3: {
+                            color: theme('colors.white'),
+                        },
+                        h4: {
+                            color: theme('colors.white'),
+                        },
+                        h5: {
+                            color: theme('colors.white'),
+                        },
+                        h6: {
+                            color: theme('colors.white'),
                         },
                         '.lead': {
                             color: theme('colors.primary.DEFAULT'),
