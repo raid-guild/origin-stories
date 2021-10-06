@@ -42,7 +42,7 @@ export default function CardList({ stories }) {
                                         </small>
                                     </div>
                                 </div>
-                                <Link href={'origins/' + slug}>
+                                <Link href={'/origins/' + slug}>
                                     <a className="w-full mt-2">
                                         <button
                                             type="button"

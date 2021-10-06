@@ -21,14 +21,14 @@ export default function Article({
     return (
         <>
             <Head>
-                <title>Raid Guid Origins | {name}</title>
+                <title>{name} | Raid Guid Origins</title>
             </Head>
             <div className="bg-dark-darker">
-                <div className="h-[650px] relative">
+                <div className="h-[280px] md:h-[650px] relative">
                     <div className="relative z-10">
                         <Header />
-                        <div className="px-12 py-8">
-                            <div className="h-40 md:h-[450px] relative radius-2">
+                        <div className="px-4 md:px-12 py-8">
+                            <div className="h-48 w-auto md:h-[450px] relative radius-2 block">
                                 <Image
                                     className="object-cover object-center"
                                     src={header}
@@ -40,8 +40,8 @@ export default function Article({
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-b from-dark via-primary opacity-80 z-0"></div>
                 </div>
-                <div className="grid grid-cols-3 md:px-20 lg:px-24 xl:px-28 gap-16 pt-8 h-full">
-                    <main className="col-span-3 z-[999] px-12">
+                <div className="flex justify-center md:px-20 lg:px-24 xl:px-28 gap-16 pt-8 h-full">
+                    <main className="self-center z-[999] px-12">
                         <h1 className="font-sans">The Origins of {name}</h1>
                         <p className="text-base">
                             <span className="opacity-80">Interviewed by </span>
