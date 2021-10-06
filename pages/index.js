@@ -36,7 +36,7 @@ const Home = ({ stories }) => {
                                     DAO? The answers are in our stories.
                                 </p>
                             </div>
-                            <div className="flex">
+                            <div className="flex my-4 md:my-0">
                                 <div className="relative h-full">
                                     <Image
                                         className="object-cover object-center absolute inset-0 z-50"
