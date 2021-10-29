@@ -27,13 +27,15 @@ export default function Article({
                 <div className="h-[280px] md:h-[650px] relative">
                     <div className="relative z-10">
                         <Header />
-                        <div className="px-4 md:px-12 py-8">
-                            <div className="h-48 w-auto md:h-[450px] relative radius-2 block">
+                        <div className="px-4 md:px-48 pt-4">
+                            <div className="aspect-w-11 aspect-h-5 relative block filter drop-shadow-lg">
+                                {/* <div className="h-48 w-4/5 md:h-[450px] relative block rounded-md overflow-hidden"> */}
                                 <Image
-                                    className="object-cover object-center"
+                                    className="object-cover object-center rounded-md"
                                     src={header}
-                                    alt={name}
+                                    alt={`${name} header illustration`}
                                     layout="fill"
+                                    objectFit="cover"
                                 />
                             </div>
                         </div>
