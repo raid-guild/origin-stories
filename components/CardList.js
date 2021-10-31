@@ -2,13 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function CardList({ stories }) {
-	const sortedStories = stories.sort((a, b) => {
+	const featuredStories = stories.sort((a, b) => {
 		return a.featured === b.featured ? 0 : a.featured ? -1 : 1;
 	});
 	return (
 		<>
 			<div className='grid lg:grid-cols-3 justify-items-center'>
-				{sortedStories.map(
+				{featuredStories.map(
 					(
 						{ name, picture, username, content, excerpt, slug, featured },
 						index
