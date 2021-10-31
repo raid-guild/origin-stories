@@ -24,27 +24,32 @@ export default function Article({
                 <title>{name} | Raid Guid Origins</title>
             </Head>
             <div className="bg-dark-darker">
-                <div className="h-[280px] md:h-[650px] relative">
+                <div className="relative">
                     <div className="relative z-10">
                         <Header />
-                        <div className="px-4 md:px-12 py-8">
-                            <div className="h-48 w-auto md:h-[450px] relative radius-2 block">
+                        <div className="px-4 md:px-36 pt-4">
+                            <div className="aspect-w-11 aspect-h-5 filter drop-shadow-lg">
                                 <Image
-                                    className="object-cover object-center"
+                                    className="object-cover object-center rounded-md"
                                     src={header}
-                                    alt={name}
+                                    alt={`${name} header illustration`}
                                     layout="fill"
+                                    objectFit="cover"
                                 />
                             </div>
                         </div>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-b from-dark via-primary opacity-80 z-0"></div>
                 </div>
-                <div className="flex justify-center md:px-20 lg:px-24 xl:px-28 gap-16 pt-8 h-full">
-                    <main className="self-center z-[999] px-12">
-                        <h1 className="font-sans">The Origins of {name}</h1>
+                <div className="flex justify-center md:px-16 lg:px-20 xl:px-24 gap-16 pt-8 h-full">
+                    <main className="self-center z-[999] px-6">
+                        <h1 className="font-sans">
+                            The Origin Story of {name}
+                        </h1>
                         <p className="text-base">
-                            <span className="opacity-80">Interviewed by </span>
+                            <span className="opacity-70">
+                                — From a talk with{' '}
+                            </span>
                             <span className="text-primary opacity-100">
                                 {interviewer}
                             </span>

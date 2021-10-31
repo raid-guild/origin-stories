@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
+    "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/line-clamp": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
     "gray-matter": "^4.0.3",
