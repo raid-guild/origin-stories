@@ -13,6 +13,7 @@
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/line-clamp": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
+    "framer-motion": "^5.0.0",
     "gray-matter": "^4.0.3",
     "next": "11.1.0",
     "next-mdx-remote": "^3.0.4",
