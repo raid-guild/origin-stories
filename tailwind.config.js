@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors');
+const { opacity } = require('tailwindcss/defaultTheme');
 
 module.exports = {
     mode: 'jit',
@@ -42,6 +43,9 @@ module.exports = {
                     css: {
                         color: theme('colors.white'),
                         fontSize: '1.25em',
+                        p: {
+                            opacity: 0.9,
+                        },
                         blockquote: {
                             borderLeftColor: theme('colors.primary.DEFAULT'),
                             color: colors.gray[300],
