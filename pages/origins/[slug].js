@@ -4,10 +4,13 @@ import Image from 'next/image';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 
+import { motion } from 'framer-motion';
+
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 import { getAllStories } from '../../utils/data';
+import mapImage from '../../public/images/map.png';
 
 export default function Article({
     name,
@@ -29,16 +32,40 @@ export default function Article({
                         <Header />
                         <div className="px-4 md:px-36 pt-4">
                             <div className="aspect-w-11 aspect-h-5 filter drop-shadow-lg">
-                                <Image
-                                    className="object-cover object-center rounded-md"
-                                    src={header}
-                                    alt={`${name} header illustration`}
-                                    layout="fill"
-                                    objectFit="cover"
-                                />
+                                <motion.div
+                                    animate={{
+                                        y: 0,
+                                        rotate: 0,
+                                        opacity: 1,
+                                    }}
+                                    initial={{
+                                        y: -100,
+                                        rotate: -6,
+                                        opacity: 0,
+                                    }}
+                                    transition={{
+                                        duration: 1.2,
+                                        delay: 0.8,
+                                    }}
+                                >
+                                    <Image
+                                        className="object-cover object-center rounded-md"
+                                        src={header}
+                                        alt={`${name} header illustration`}
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
+                                </motion.div>
                             </div>
                         </div>
                     </div>
+                    <Image
+                        src={mapImage}
+                        className="object-cover object-bottom absolute inset-0 z-0"
+                        layout="fill"
+                        draggable="false"
+                        alt="Raid map"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-b from-dark via-primary opacity-80 z-0"></div>
                 </div>
                 <div className="flex justify-center md:px-16 lg:px-20 xl:px-24 gap-16 pt-8 h-full">
