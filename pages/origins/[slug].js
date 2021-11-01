@@ -18,6 +18,7 @@ export default function Article({
     header,
     username,
     picture,
+    excerpt,
     interviewer,
     content,
 }) {
@@ -25,6 +26,32 @@ export default function Article({
         <>
             <Head>
                 <title>{name} | Raid Guid Origins</title>
+                <meta name="description" content={excerpt} />
+                {/* Facebook */}
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:url"
+                    content="https://portfolio.raidguild.org/"
+                />
+                <meta
+                    property="og:title"
+                    content={`${name} | Raid Guid Origins`}
+                />
+                <meta property="og:description" content={excerpt} />
+                <meta property="og:image" content={header} />
+
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta
+                    property="twitter:url"
+                    content="https://portfolio.raidguild.org/"
+                />
+                <meta
+                    property="twitter:title"
+                    content={`${name} | Raid Guid Origins`}
+                />
+                <meta property="twitter:description" content={excerpt} />
+                <meta property="twitter:image" content={header} />
             </Head>
             <div className="bg-dark-darker">
                 <div className="relative">
