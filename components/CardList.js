@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -14,11 +15,14 @@ export default function CardList({ stories }) {
 						index
 					) => {
 						return (
-							<div
+							<motion.div
 								key={index}
 								className={`card ${
 									featured === true ? 'featured-raider-card' : ''
-								}`}>
+								}`}
+								initial={{ opacity: 0 }}
+								animate={{ opacity: [0, 1] }}
+								transition={{ duration: 0.5, delay: index / 10 }}>
 								{featured === true ? (
 									<div className='flex justify-start items-center'>
 										<p className='text-yellow-400 text-xs font-semibold uppercase mb-2 tracking-widest'>
@@ -52,7 +56,7 @@ export default function CardList({ stories }) {
 										</button>
 									</a>
 								</Link>
-							</div>
+							</motion.div>
 						);
 					}
 				)}
