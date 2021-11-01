@@ -4,7 +4,7 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps, router }) {
 	return (
-		<AnimatePresence exitBeforeEnter>
+		<AnimatePresence>
 			<Head>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 			</Head>
