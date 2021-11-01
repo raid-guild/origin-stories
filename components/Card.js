@@ -2,16 +2,32 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Card({ story, index }) {
+export default function Card({ story, index, inView, maxLength }) {
 	const { name, picture, username, content, excerpt, slug, featured } = story;
-	const item = {
-		hidden: { opacity: 0 },
-		show: { opacity: 1 },
+	const card = {
+		hidden: {
+			opacity: 0,
+		},
+		show: {
+			opacity: 1,
+			y: [0, 20],
+			transition: {
+				type: 'tween',
+				duration: 0.8,
+				delay: index / maxLength,
+			},
+		},
+		hover: { scale: 1.1, transition: { duration: 0.3 } },
 	};
+
 	return (
 		<motion.div
 			className={`card ${featured === true ? 'featured-raider-card' : ''}`}
-			variants={item}>
+			initial='hidden'
+			animate={inView ? 'show' : 'hidden'}
+			transition='transition'
+			whileHover='hover'
+			variants={card}>
 			{featured === true ? (
 				<div className='flex justify-start items-center'>
 					<p className='text-yellow-400 text-xs font-semibold uppercase mb-2 tracking-widest'>

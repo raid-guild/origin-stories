@@ -10,61 +10,73 @@ import mapImage from '../public/images/map.png';
 import { getAllStories } from '../utils/data';
 
 const Home = ({ stories }) => {
+	const typography = {
+		hidden: {
+			x: '-100vw',
+		},
+		show: {
+			x: 0,
+			transition: { type: 'spring', duration: 1.5, delay: 0.2 },
+		},
+	};
+	const firstImage = {
+		hidden: {
+			x: '100vw',
+		},
+		show: {
+			x: 0,
+			transition: { type: 'spring', duration: 1.5, delay: 0.3 },
+		},
+	};
+	const secondImage = {
+		hidden: {
+			x: '100vw',
+		},
+		show: {
+			x: 0,
+			transition: { type: 'spring', duration: 1.5, delay: 0.4 },
+		},
+	};
 	return (
 		<>
 			<Head>
 				<title>Raid Guild Origins</title>
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
-                <meta charSet="utf-8" />
-                <meta name="theme-color" content="#FF3864" />
-                <meta
-                    name="description"
-                    content="Learn the origin stories of raiders from Raid Guild! ⚔"
-                />
-                {/* Facebook */}
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:url"
-                    content="https://portfolio.raidguild.org/"
-                />
-                <meta property="og:title" content="Raid Guild Origin Stories" />
-                <meta
-                    property="og:description"
-                    content="Learn the origin stories of members from Raid Guild! Hear their backgrounds: how they got into Web3, and Raid Guild; their thoughts on DAOs and more."
-                />
-                <meta property="og:image" content="/images/social-banner.png" />
+				<meta name='viewport' content='width=device-width, initial-scale=1' />
+				<meta charSet='utf-8' />
+				<meta name='theme-color' content='#FF3864' />
+				<meta
+					name='description'
+					content='Learn the origin stories of raiders from Raid Guild! ⚔'
+				/>
+				{/* Facebook */}
+				<meta property='og:type' content='website' />
+				<meta property='og:url' content='https://portfolio.raidguild.org/' />
+				<meta property='og:title' content='Raid Guild Origin Stories' />
+				<meta
+					property='og:description'
+					content='Learn the origin stories of members from Raid Guild! Hear their backgrounds: how they got into Web3, and Raid Guild; their thoughts on DAOs and more.'
+				/>
+				<meta property='og:image' content='/images/social-banner.png' />
 
-                {/* Twitter */}
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta
-                    property="twitter:url"
-                    content="https://portfolio.raidguild.org/"
-                />
-                <meta
-                    property="twitter:title"
-                    content="Raid Guild Origin Stories"
-                />
-                <meta
-                    property="twitter:description"
-                    content="Learn the origin stories of members from Raid Guild!"
-                />
-                <meta
-                    property="twitter:image"
-                    content="/images/social-banner.png"
-                />
+				{/* Twitter */}
+				<meta property='twitter:card' content='summary_large_image' />
+				<meta
+					property='twitter:url'
+					content='https://portfolio.raidguild.org/'
+				/>
+				<meta property='twitter:title' content='Raid Guild Origin Stories' />
+				<meta
+					property='twitter:description'
+					content='Learn the origin stories of members from Raid Guild!'
+				/>
+				<meta property='twitter:image' content='/images/social-banner.png' />
 			</Head>
 			<div className='bg-dark-darker'>
 				<div className='h-[650px] relative'>
 					<div className='relative z-10'>
 						<Header />
 						<div className='flex flex-col lg:flex-row lg:justify-between px-6 md:px-24 lg:pt-24'>
-							<motion.div
-								initial={{ opacity: 0 }}
-								animate={{ opacity: [0, 1] }}
-								transition={{ duration: 0.2, delay: 0.2 }}>
+							<motion.div initial='hidden' animate='show' variants={typography}>
 								<h1 className='font-display text-5xl mt-10 md:mt-0 md:w-[36rem]'>
 									Every Raider Comes From Somewhere
 								</h1>
@@ -80,9 +92,9 @@ const Home = ({ stories }) => {
 							<div className='flex my-4 md:my-0'>
 								<motion.div
 									className='relative h-full'
-									initial={{ opacity: 0 }}
-									animate={{ opacity: [0, 1] }}
-									transition={{ duration: 0.3, delay: 0.3 }}>
+									initial='hidden'
+									animate='show'
+									variants={firstImage}>
 									<Image
 										className='object-cover object-center absolute inset-0 z-50'
 										src={clicksWorld}
@@ -91,9 +103,9 @@ const Home = ({ stories }) => {
 								</motion.div>
 								<motion.div
 									className='relative h-full'
-									initial={{ opacity: 0 }}
-									animate={{ opacity: [0, 1] }}
-									transition={{ duration: 0.4, delay: 0.4 }}>
+									initial='hidden'
+									animate='show'
+									variants={secondImage}>
 									<Image
 										className='object-cover object-center absolute inset-0'
 										src={handHeart}
