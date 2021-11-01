@@ -3,6 +3,45 @@
 @tailwind utilities;
 
 @layer base {
+    @font-face {
+        font-family: 'Uncial Antiqua';
+        src: url(/fonts/UncialAntiqua.ttf) format('truetype');
+        font-weight: 'regular';
+    }
+    @font-face {
+        font-family: 'OpenSans';
+        src: local('Open Sans'), local('Open Sans Regular'),
+            local('Open Sans-Regular'),
+            url(/fonts/OpenSans-Regular.ttf) format('truetype');
+        font-weight: '400';
+    }
+    @font-face {
+        font-family: 'OpenSans-RegularItalic';
+        src: local('Open Sans Italic'), local('Open Sans-Italic'),
+            url(/fonts/OpenSans-RegularItalic.ttf) format('truetype');
+        font-weight: '400';
+        font-style: 'italic';
+    }
+    @font-face {
+        font-family: 'OpenSans-SemiBold';
+        src: local('Open Sans SemiBold'), local('Open Sans-SemiBold'),
+            url(/fonts/OpenSans-SemiBold.ttf) format('truetype');
+        font-weight: '600';
+    }
+    @font-face {
+        font-family: 'OpenSans-SemiBoldItalic';
+        src: local('Open Sans SemiBoldItalic'),
+            local('Open Sans-SemiBoldItalic'),
+            url(/fonts/OpenSans-SemiBoldItalic.ttf) format('truetype');
+        font-weight: '600';
+        font-style: 'italic';
+    }
+    @font-face {
+        font-family: 'OpenSans-Bold';
+        src: local('Open Sans Bold'), local('Open Sans-Bold'),
+            url(/fonts/OpenSans-Bold.ttf) format('truetype');
+        font-weight: '700';
+    }
     html {
         @apply text-white m-0 p-0 text-sm;
         scroll-behavior: smooth;
