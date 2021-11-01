@@ -18,6 +18,7 @@ export default function Article({
     header,
     username,
     picture,
+    excerpt,
     interviewer,
     content,
 }) {
@@ -25,13 +26,39 @@ export default function Article({
         <>
             <Head>
                 <title>{name} | Raid Guid Origins</title>
+                <meta name="description" content={excerpt} />
+                {/* Facebook */}
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:url"
+                    content="https://portfolio.raidguild.org/"
+                />
+                <meta
+                    property="og:title"
+                    content={`${name} | Raid Guild Origins`}
+                />
+                <meta property="og:description" content={excerpt} />
+                <meta property="og:image" content={header} />
+
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta
+                    property="twitter:url"
+                    content="https://portfolio.raidguild.org/"
+                />
+                <meta
+                    property="twitter:title"
+                    content={`${name} | Raid Guild Origins`}
+                />
+                <meta property="twitter:description" content={excerpt} />
+                <meta property="twitter:image" content={header} />
             </Head>
             <div className="bg-dark-darker">
                 <div className="relative">
                     <div className="relative z-10">
                         <Header />
                         <div className="px-4 md:px-36 pt-4">
-                            <div className="aspect-w-11 aspect-h-5 filter drop-shadow-lg">
+                            <div className="aspect-w-11 aspect-h-5 filter drop-shadow-lg max-h-[650px]">
                                 <motion.div
                                     animate={{
                                         y: 0,
