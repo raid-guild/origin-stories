@@ -35,7 +35,7 @@ export default function Article({
                 />
                 <meta
                     property="og:title"
-                    content={`${name} | Raid Guid Origins`}
+                    content={`${name} | Raid Guild Origins`}
                 />
                 <meta property="og:description" content={excerpt} />
                 <meta property="og:image" content={header} />
@@ -48,7 +48,7 @@ export default function Article({
                 />
                 <meta
                     property="twitter:title"
-                    content={`${name} | Raid Guid Origins`}
+                    content={`${name} | Raid Guild Origins`}
                 />
                 <meta property="twitter:description" content={excerpt} />
                 <meta property="twitter:image" content={header} />
