@@ -31,7 +31,7 @@ export default function Article({
                     <div className="relative z-10">
                         <Header />
                         <div className="px-4 md:px-36 pt-4">
-                            <div className="aspect-w-11 aspect-h-5 filter drop-shadow-lg">
+                            <div className="aspect-w-11 aspect-h-5 filter drop-shadow-lg max-h-[650px]">
                                 <motion.div
                                     animate={{
                                         y: 0,
