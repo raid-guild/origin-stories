@@ -9,7 +9,7 @@ export default function CardList({ stories }) {
 	});
 	return (
 		<>
-			{/* <h2 className='my-10 pl-6 md:pl-20'>Origin Stories</h2> */}
+			<h2 className='my-10 pl-6 md:pl-20'>Origin Stories</h2>
 			<div ref={ref} className='grid lg:grid-cols-3 justify-items-center'>
 				{featuredStories.map((story, index) => (
 					<Card
