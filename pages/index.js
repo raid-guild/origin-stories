@@ -10,31 +10,15 @@ import mapImage from '../public/images/map.png';
 import { getAllStories } from '../utils/data';
 
 const Home = ({ stories }) => {
-	const typography = {
-		hidden: {
-			x: '-100vw',
-		},
-		show: {
-			x: 0,
-			transition: { type: 'spring', duration: 1.5, delay: 0.2 },
-		},
-	};
 	const firstImage = {
-		hidden: {
-			x: '100vw',
+		initial: {
+			rotate: 2,
+			x: 20,
 		},
-		show: {
+		tilt: {
+			rotate: -2,
 			x: 0,
 			transition: { type: 'spring', duration: 1.5, delay: 0.3 },
-		},
-	};
-	const secondImage = {
-		hidden: {
-			x: '100vw',
-		},
-		show: {
-			x: 0,
-			transition: { type: 'spring', duration: 1.5, delay: 0.4 },
 		},
 	};
 	return (
@@ -76,7 +60,7 @@ const Home = ({ stories }) => {
 					<div className='relative z-10'>
 						<Header />
 						<div className='flex flex-col lg:flex-row lg:justify-between px-6 md:px-24 lg:pt-24'>
-							<motion.div initial='hidden' animate='show' variants={typography}>
+							<div>
 								<h1 className='font-display text-5xl mt-10 md:mt-0 md:w-[36rem]'>
 									Every Raider Comes From Somewhere
 								</h1>
@@ -88,12 +72,12 @@ const Home = ({ stories }) => {
 									in Web3? What is life really like working in DAO? The answers
 									are in our stories.
 								</p>
-							</motion.div>
+							</div>
 							<div className='flex my-4 md:my-0'>
 								<motion.div
 									className='relative h-full'
-									initial='hidden'
-									animate='show'
+									initial='initial'
+									animate='tilt'
 									variants={firstImage}>
 									<Image
 										className='object-cover object-center absolute inset-0 z-50'
@@ -101,17 +85,13 @@ const Home = ({ stories }) => {
 										alt='Click world'
 									/>
 								</motion.div>
-								<motion.div
-									className='relative h-full'
-									initial='hidden'
-									animate='show'
-									variants={secondImage}>
+								<div className='relative h-full'>
 									<Image
 										className='object-cover object-center absolute inset-0'
 										src={handHeart}
 										alt='Hand on heart'
 									/>
-								</motion.div>
+								</div>
 							</div>
 						</div>
 					</div>

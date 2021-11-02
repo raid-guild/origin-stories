@@ -17,7 +17,7 @@ export default function Card({ story, index, inView, maxLength }) {
 				delay: index / maxLength,
 			},
 		},
-		hover: { scale: 1.1, transition: { duration: 0.3 } },
+		hover: { scale: 1.08, transition: { duration: 0.3 } },
 	};
 
 	return (
