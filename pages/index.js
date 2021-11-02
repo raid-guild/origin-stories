@@ -108,7 +108,7 @@ const Home = ({ stories }) => {
 				</div>
 
 				{/* Cards */}
-				<div className='container md:mx-auto mb-10 px-6'>
+				<div className='container md:mx-auto mb-10 px-6 md:px-24'>
 					<CardList stories={stories} />
 				</div>
 				<Footer />
