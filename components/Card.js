@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function Card({ story, index, inView, maxLength }) {
+	const [show, setShow] = useState();
+	useEffect(() => {
+		inView ? setShow(show, true) : setShow(show, true);
+	}, [inView]);
 	const { name, picture, username, content, excerpt, slug, featured } = story;
 	const card = {
 		hidden: {
