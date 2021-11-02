@@ -2,7 +2,7 @@ import { useInView } from 'react-intersection-observer';
 import Card from './Card';
 
 export default function CardList({ stories }) {
-	const { ref, inView } = useInView({ threshold: 0.5 });
+	const { ref, inView } = useInView({ threshold: 0.05 });
 
 	const featuredStories = stories.sort((a, b) => {
 		return a.featured === b.featured ? 0 : a.featured ? -1 : 1;
