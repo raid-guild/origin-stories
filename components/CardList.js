@@ -9,7 +9,9 @@ export default function CardList({ stories }) {
 	return (
 		<>
 			<h2 className='my-10'>Origin Stories</h2>
-			<div ref={ref} className='grid lg:grid-cols-3 justify-items-center'>
+			<div
+				ref={ref}
+				className='grid lg:grid-cols-2 xl:grid-cols-3 justify-items-center'>
 				{featuredStories.map((story, index) => (
 					<Card
 						key={index}
