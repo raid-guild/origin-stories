@@ -50,7 +50,7 @@ export default function Article({
                 <div className="relative">
                     <div className="relative z-10">
                         <Header />
-                        <div className="px-4 md:px-36 pt-4">
+                        <div className="px-4 md:px-36 lg:px-56 pt-4">
                             <div className="aspect-w-11 aspect-h-5 filter drop-shadow-lg max-h-[650px]">
                                 <motion.div
                                     animate={{
@@ -65,7 +65,7 @@ export default function Article({
                                     }}
                                     transition={{
                                         duration: 1.2,
-                                        delay: 0.8,
+                                        delay: 1,
                                     }}
                                 >
                                     <Image
@@ -74,6 +74,7 @@ export default function Article({
                                         alt={`${name} header illustration`}
                                         layout="fill"
                                         objectFit="cover"
+                                        sizes="70vw"
                                         priority
                                     />
                                 </motion.div>
@@ -84,6 +85,8 @@ export default function Article({
                         src={mapImage}
                         className="object-cover object-bottom absolute inset-0 z-0"
                         layout="fill"
+                        sizes="70vw"
+                        quality="60"
                         draggable="false"
                         alt="Raid map"
                     />

@@ -1,14 +1,19 @@
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+
+import { motion } from 'framer-motion';
 
 export default function Card({ story, index, inView, maxLength }) {
     const [show, setShow] = useState();
+
     useEffect(() => {
         inView ? setShow(show, true) : setShow(show, true);
     }, [inView]);
-    const { name, picture, username, content, excerpt, slug, featured } = story;
+
+    const { name, picture, username, excerpt, slug, featured } = story;
+
     const card = {
         hidden: {
             opacity: 0,
@@ -47,12 +52,15 @@ export default function Card({ story, index, inView, maxLength }) {
                 &quot;{excerpt.substr(0, 100)}...&quot;
             </p>
             <div className="flex items-center justify-start space-x-2 border-b-2 my-4 pb-4 border-indigo-200 border-opacity-50">
-                <div className="rounded-full bg-primary h-12 w-12 relative overflow-hidden">
+                <div className="relative overflow-hidden">
                     <Image
                         src={`/static/images/story/${picture}`}
-                        className="object-cover object-center"
-                        layout="fill"
+                        className="rounded-full"
+                        height="50px"
+                        width="50px"
                         alt="Picture of the Interviewee"
+                        objectFit="cover"
+                        quality={70}
                     />
                 </div>
                 <div>
