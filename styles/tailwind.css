@@ -5,42 +5,46 @@
 @layer base {
     @font-face {
         font-family: 'Uncial Antiqua';
-        src: url(/fonts/UncialAntiqua.ttf) format('truetype');
+        src: url('/static/fonts/UncialAntiqua.ttf') format('truetype');
         font-weight: 'regular';
+        font-style: 'normal';
     }
     @font-face {
-        font-family: 'OpenSans';
+        font-family: 'Open Sans Regular';
         src: local('Open Sans'), local('Open Sans Regular'),
             local('Open Sans-Regular'),
-            url(/fonts/OpenSans-Regular.ttf) format('truetype');
+            url('/static/fonts/OpenSans-Regular.ttf') format('truetype');
         font-weight: '400';
+        font-stye: 'normal';
     }
     @font-face {
-        font-family: 'OpenSans-RegularItalic';
+        font-family: 'Open Sans Italic';
         src: local('Open Sans Italic'), local('Open Sans-Italic'),
-            url(/fonts/OpenSans-RegularItalic.ttf) format('truetype');
+            url('/static/fonts/OpenSans-RegularItalic.ttf') format('truetype');
         font-weight: '400';
         font-style: 'italic';
     }
     @font-face {
-        font-family: 'OpenSans-SemiBold';
+        font-family: 'Open Sans SemiBold';
         src: local('Open Sans SemiBold'), local('Open Sans-SemiBold'),
-            url(/fonts/OpenSans-SemiBold.ttf) format('truetype');
+            url('/static/fonts/OpenSans-SemiBold.ttf') format('truetype');
         font-weight: '600';
+        font-style: normal;
     }
     @font-face {
-        font-family: 'OpenSans-SemiBoldItalic';
+        font-family: 'Open Sans SemiBold Italic';
         src: local('Open Sans SemiBoldItalic'),
             local('Open Sans-SemiBoldItalic'),
-            url(/fonts/OpenSans-SemiBoldItalic.ttf) format('truetype');
+            url('/static/fonts/OpenSans-SemiBoldItalic.ttf') format('truetype');
         font-weight: '600';
         font-style: 'italic';
     }
     @font-face {
-        font-family: 'OpenSans-Bold';
+        font-family: 'Open Sans Bold';
         src: local('Open Sans Bold'), local('Open Sans-Bold'),
-            url(/fonts/OpenSans-Bold.ttf) format('truetype');
+            url('/static/fonts/OpenSans-Bold.ttf') format('truetype');
         font-weight: '700';
+        font-stye: 'normal';
     }
     html {
         @apply text-white m-0 p-0 text-sm;
