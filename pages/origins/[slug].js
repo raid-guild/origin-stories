@@ -38,7 +38,10 @@ export default function Article({
                     content={`${name} | Raid Guild Origins`}
                 />
                 <meta property="og:description" content={excerpt} />
-                <meta property="og:image" content={header} />
+                <meta
+                    property="og:image"
+                    content={`/static/images/story/${header}`}
+                />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />

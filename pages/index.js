@@ -48,7 +48,7 @@ const Home = ({ stories }) => {
                 />
                 <meta
                     property="og:image"
-                    content="/public/static/images/social-banner.png"
+                    content="/static/images/social-banner.png"
                 />
 
                 {/* Twitter */}
