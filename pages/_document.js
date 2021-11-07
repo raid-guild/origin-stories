@@ -11,6 +11,42 @@ class MyDocument extends Document {
             <Html>
                 <Head prefix="og:https://ogp.me/ns#">
                     <link rel="icon" href="/favicon.ico" />
+                    <link
+                        rel="preload"
+                        href="/static/fonts/OpenSans-Bold.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/static/fonts/OpenSans-Regular.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/static/fonts/OpenSans-RegularItalic.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/static/fonts/OpenSans-SemiBold.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/static/fonts/OpenSans-SemiBoldItalic.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/static/fonts/UncialAntiqua.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
                 </Head>
                 <body>
                     <Main />
