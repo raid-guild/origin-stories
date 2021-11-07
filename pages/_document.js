@@ -9,7 +9,7 @@ class MyDocument extends Document {
     render() {
         return (
             <Html>
-                <Head>
+                <Head prefix="og:https://ogp.me/ns#">
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <body>

@@ -42,16 +42,6 @@ export default function Article({
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta
-                    property="twitter:url"
-                    content="https://portfolio.raidguild.org/"
-                />
-                <meta
-                    property="twitter:title"
-                    content={`${name} | Raid Guild Origins`}
-                />
-                <meta property="twitter:description" content={excerpt} />
-                <meta property="twitter:image" content={header} />
             </Head>
             <div className="bg-dark-darker">
                 <div className="relative">
