@@ -4,131 +4,132 @@ import Image from 'next/image';
 import CardList from '../components/CardList';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import clicksWorld from '../public/images/clicks_world.png';
-import handHeart from '../public/images/hand_heart.png';
-import mapImage from '../public/images/map.png';
+import clicksWorld from '../public/static/images/clicks_world.png';
+import handHeart from '../public/static/images/hand_heart.png';
+import mapImage from '../public/static/images/map.png';
 import { getAllStories } from '../utils/data';
 
 const Home = ({ stories }) => {
-	const firstImage = {
-		initial: {
-			rotate: 2,
-			x: 20,
-		},
-		tilt: {
-			rotate: -2,
-			x: 0,
-			transition: { type: 'spring', duration: 1.5, delay: 0.3 },
-		},
-	};
-	return (
-		<>
-			<Head>
-				<title>Raid Guild Origins</title>
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<meta charSet='utf-8' />
-				<meta name='theme-color' content='#FF3864' />
-				<meta
-					name='description'
-					content='Learn the origin stories of raiders from Raid Guild! ⚔'
-				/>
-				{/* Facebook */}
-				<meta property='og:type' content='website' />
-				<meta property='og:url' content='https://portfolio.raidguild.org/' />
-				<meta property='og:title' content='Raid Guild Origin Stories' />
-				<meta
-					property='og:description'
-					content='Learn the origin stories of members from Raid Guild! Hear their backgrounds: how they got into Web3, and Raid Guild; their thoughts on DAOs and more.'
-				/>
-				<meta property='og:image' content='/images/social-banner.png' />
+    const firstImage = {
+        initial: {
+            rotate: 2,
+            x: 20,
+        },
+        tilt: {
+            rotate: -2,
+            x: 0,
+            transition: { type: 'spring', duration: 1.5, delay: 0.3 },
+        },
+    };
+    return (
+        <>
+            <Head>
+                <title>Raid Guild Origins</title>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
+                <meta charSet="utf-8" />
+                <meta name="theme-color" content="#FF3864" />
+                <meta
+                    name="description"
+                    content="Learn the origin stories of raiders from Raid Guild! ⚔"
+                />
+                {/* Facebook */}
+                <meta property="og:title" content="Raid Guild Origins" />
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:url"
+                    content="https://portfolio.raidguild.org/"
+                />
+                <meta
+                    property="og:description"
+                    content="Learn the origin stories of members from Raid Guild! Hear their backgrounds: how they got into Web3, and Raid Guild; their thoughts on DAOs and more."
+                />
+                <meta
+                    property="og:image"
+                    content="/public/static/images/social-banner.png"
+                />
 
-				{/* Twitter */}
-				<meta property='twitter:card' content='summary_large_image' />
-				<meta
-					property='twitter:url'
-					content='https://portfolio.raidguild.org/'
-				/>
-				<meta property='twitter:title' content='Raid Guild Origin Stories' />
-				<meta
-					property='twitter:description'
-					content='Learn the origin stories of members from Raid Guild!'
-				/>
-				<meta property='twitter:image' content='/images/social-banner.png' />
-			</Head>
-			<div className='bg-dark-darker'>
-				<div className='h-[650px] relative'>
-					<div className='relative z-10'>
-						<Header />
-						<div className='flex flex-col lg:flex-row lg:justify-between px-6 md:px-24 lg:pt-24'>
-							<div>
-								<h1 className='font-display text-5xl mt-10 md:mt-0 md:w-[36rem]'>
-									Every Raider Comes From Somewhere
-								</h1>
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+            </Head>
+            <div className="bg-dark-darker">
+                <div className="h-[650px] relative">
+                    <div className="relative z-10">
+                        <Header />
+                        <div className="flex flex-col lg:flex-row lg:justify-between px-6 md:px-24 lg:pt-24">
+                            <div>
+                                <h1 className="font-display text-5xl mt-10 md:mt-0 md:w-[36rem]">
+                                    Every Raider Comes From Somewhere
+                                </h1>
 
-								<p className='pt-6 leading-7 md:w-[36rem]'>
-									Raiders come from all over the globe, with different
-									backgrounds and perspectives. What were they doing before
-									joining the Guild? What has their experience been like so far
-									in Web3? What is life really like working in DAO? The answers
-									are in our stories.
-								</p>
-							</div>
-							<div className='flex my-4 md:my-0'>
-								<motion.div
-									className='relative h-full'
-									initial='initial'
-									animate='tilt'
-									variants={firstImage}>
-									<Image
-										className='object-cover object-center absolute inset-0 z-50'
-										src={clicksWorld}
-										alt='Click world'
-									/>
-								</motion.div>
-								<div className='relative h-full'>
-									<Image
-										className='object-cover object-center absolute inset-0'
-										src={handHeart}
-										alt='Hand on heart'
-									/>
-								</div>
-							</div>
-						</div>
-					</div>
+                                <p className="pt-6 leading-7 md:w-[36rem]">
+                                    Raiders come from all over the globe, with
+                                    different backgrounds and perspectives. What
+                                    were they doing before joining the Guild?
+                                    What has their experience been like so far
+                                    in Web3? What is life really like working in
+                                    DAO? The answers are in our stories.
+                                </p>
+                            </div>
+                            <div className="flex my-4 md:my-0">
+                                <motion.div
+                                    className="relative h-full"
+                                    initial="initial"
+                                    animate="tilt"
+                                    variants={firstImage}
+                                >
+                                    <Image
+                                        className="object-cover object-center absolute inset-0 z-50"
+                                        src={clicksWorld}
+                                        alt="Click world"
+                                    />
+                                </motion.div>
+                                <div className="relative h-full">
+                                    <Image
+                                        className="object-cover object-center absolute inset-0"
+                                        src={handHeart}
+                                        alt="Hand on heart"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-					{/* Background Image */}
-					<Image
-						src={mapImage}
-						className='object-cover object-bottom absolute inset-0 z-0'
-						layout='fill'
-						draggable='false'
-						alt='Raid map'
-					/>
-					<div className='absolute inset-0 bg-gradient-to-b from-dark via-primary opacity-80 z-0'></div>
-				</div>
+                    {/* Background Image */}
+                    <Image
+                        src={mapImage}
+                        className="object-cover object-bottom absolute inset-0 z-0"
+                        layout="fill"
+                        draggable="false"
+                        alt="Raid map"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-dark via-primary opacity-80 z-0"></div>
+                </div>
 
-				{/* Cards */}
-				<div className='container md:mx-auto mb-10 px-6 md:px-24'>
-					<CardList stories={stories} />
-				</div>
-				<Footer />
-			</div>
-		</>
-	);
+                {/* Cards */}
+                <div className="container md:mx-auto mb-10 px-6 md:px-24">
+                    <CardList stories={stories} />
+                </div>
+                <Footer />
+            </div>
+        </>
+    );
 };
 
 export default Home;
 
 export async function getStaticProps(context) {
-	const allStories = getAllStories();
+    const allStories = getAllStories();
 
-	return {
-		props: {
-			stories: allStories.map(({ data, content, slug }) => ({
-				...data,
-				content,
-				slug,
-			})),
-		},
-	};
+    return {
+        props: {
+            stories: allStories.map(({ data, content, slug }) => ({
+                ...data,
+                content,
+                slug,
+            })),
+        },
+    };
 }

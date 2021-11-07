@@ -2,123 +2,128 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import rgLogo from '../public/images/raidguild_logo.svg';
-
-
+import rgLogo from '../public/static/images/raidguild_logo.svg';
 
 const navigation = [
-	{ name: 'Home', href: '/' },
-	{ name: 'Freelancer Tips', href: '/tips' },
+    { name: 'Home', href: '/' },
+    { name: 'Freelancer Tips', href: '/tips' },
 ];
 
 const combineClasses = (...classes) => classes.filter(Boolean).join(' ');
 
 const Header = () => {
-	const [navOpen, setNavOpen] = useState(false);
-	const router = useRouter();
+    const [navOpen, setNavOpen] = useState(false);
+    const router = useRouter();
 
-	const toggleNav = () => setNavOpen(!navOpen);
+    const toggleNav = () => setNavOpen(!navOpen);
 
-	return (
-		<nav className='flex flex-col md:flex-row md:justify-between h-24 px-6 md:px-24 pt-4 w-vw'>
-			<div className='flex flex-row justify-between items-center'>
-				<Link href='/'>
-					<a className='flex items-center space-x-2'>
-						<div className='h-14 w-24 relative'>
-							<Image src={rgLogo} alt='Raid Guild Logo' layout='fill' />
-						</div>
-						<span className='font-medium text-xs tracking-widest border-l-2 border-white uppercase pl-2'>
-							Origins
-						</span>
-					</a>
-				</Link>
+    return (
+        <nav className="flex flex-col md:flex-row md:justify-between h-24 px-6 md:px-24 pt-4 w-vw">
+            <div className="flex flex-row justify-between items-center">
+                <Link href="/" className="flex items-center space-x-2">
+                    <div className="h-14 w-24 relative">
+                        <Image
+                            src={rgLogo}
+                            alt="Raid Guild Logo"
+                            layout="fill"
+                        />
+                    </div>
+                    <span className="font-medium text-xs tracking-widest border-l-2 border-white uppercase pl-2">
+                        Origins
+                    </span>
+                </Link>
 
-				<button
-					type='button'
-					onClick={toggleNav}
-					className={combineClasses(
-						navOpen ? 'bg-opacity-100' : 'bg-opacity-30',
-						'px-4 py-2 md:hidden rounded-lg bg-dark-darker'
-					)}>
-					<span className='sr-only'>Open main menu</span>
-					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						className={combineClasses(
-							navOpen ? 'opacity-0 hidden' : 'opacity-100 block',
-							'h-6 w-6 transition-all duration-200'
-						)}
-						fill='none'
-						viewBox='0 0 24 24'
-						stroke='currentColor'>
-						<path
-							strokeLinecap='round'
-							strokeLinejoin='round'
-							strokeWidth='2'
-							d='M4 6h16M4 12h16M4 18h16'
-						/>
-					</svg>
-					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						className={combineClasses(
-							navOpen
-								? 'opacity-100 block rotate-0'
-								: 'opacity-0 hidden rotate--45',
-							'h-6 w-6 transition-all duration-500'
-						)}
-						fill='none'
-						viewBox='0 0 24 24'
-						stroke='currentColor'>
-						<path
-							strokeLinecap='round'
-							strokeLinejoin='round'
-							strokeWidth='2'
-							d='M6 18L18 6M6 6l12 12'
-						/>
-					</svg>
-				</button>
-			</div>
+                <button
+                    type="button"
+                    onClick={toggleNav}
+                    className={combineClasses(
+                        navOpen ? 'bg-opacity-100' : 'bg-opacity-30',
+                        'px-4 py-2 md:hidden rounded-lg bg-dark-darker'
+                    )}
+                >
+                    <span className="sr-only">Open main menu</span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className={combineClasses(
+                            navOpen ? 'opacity-0 hidden' : 'opacity-100 block',
+                            'h-6 w-6 transition-all duration-200'
+                        )}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
+                    </svg>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className={combineClasses(
+                            navOpen
+                                ? 'opacity-100 block rotate-0'
+                                : 'opacity-0 hidden rotate--45',
+                            'h-6 w-6 transition-all duration-500'
+                        )}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
+                    </svg>
+                </button>
+            </div>
 
-			{/* Mobile nav */}
-			<ul
-				className={combineClasses(
-					navOpen
-						? 'visible opacity-100 translate-y-4 translate-x-0'
-						: 'invisible opacity-0 translate-y-0 translate-x-1',
-					'relative list-none transition-all duration-300 h-auto flex flex-col bg-dark-darker rounded-md justify-around shadow-md z-10 md:hidden'
-				)}>
-				{navigation.map((navItem, index) => (
-					<Link href={navItem.href} key={navItem.name} passHref>
-						<li
-							className={combineClasses(
-								router.asPath === navItem.href
-									? 'bg-primary-dark'
-									: 'text-white text-opacity-70',
-								index === 0
-									? 'rounded-t-md'
-									: index === navigation.length - 1
-									? 'rounded-b-md'
-									: '',
-								navOpen ? 'opacity-100' : 'opacity-0',
-								'transition-all ease-in-out duration-200 active:bg-primary p-4'
-							)}>
-							{navItem.name}
-						</li>
-					</Link>
-				))}
-			</ul>
+            {/* Mobile nav */}
+            <ul
+                className={combineClasses(
+                    navOpen
+                        ? 'visible opacity-100 translate-y-4 translate-x-0'
+                        : 'invisible opacity-0 translate-y-0 translate-x-1',
+                    'relative list-none transition-all duration-300 h-auto flex flex-col bg-dark-darker rounded-md justify-around shadow-md z-10 md:hidden'
+                )}
+            >
+                {navigation.map((navItem, index) => (
+                    <Link href={navItem.href} key={navItem.name} passHref>
+                        <li
+                            className={combineClasses(
+                                router.asPath === navItem.href
+                                    ? 'bg-primary-dark'
+                                    : 'text-white text-opacity-70',
+                                index === 0
+                                    ? 'rounded-t-md'
+                                    : index === navigation.length - 1
+                                    ? 'rounded-b-md'
+                                    : '',
+                                navOpen ? 'opacity-100' : 'opacity-0',
+                                'transition-all ease-in-out duration-200 active:bg-primary p-4'
+                            )}
+                        >
+                            {navItem.name}
+                        </li>
+                    </Link>
+                ))}
+            </ul>
 
-			{/* Desktop nav */}
-			<ul className='list-none h-auto hidden md:flex space-x-12 items-center'>
-				{navigation.map((navItem) => (
-					<Link href={navItem.href} key={navItem.name} passHref>
-						<li className='transition ease-out duration-200 font-sans text-base pb-1 border-b-2 border-transparent hover:border-b-2 hover:border-red-700 cursor-pointer'>
-							{navItem.name}
-						</li>
-					</Link>
-				))}
-			</ul>
-		</nav>
-	);
+            {/* Desktop nav */}
+            <ul className="list-none h-auto hidden md:flex space-x-12 items-center">
+                {navigation.map((navItem) => (
+                    <Link href={navItem.href} key={navItem.name} passHref>
+                        <li className="transition ease-out duration-200 font-sans text-base pb-1 border-b-2 border-transparent hover:border-b-2 hover:border-red-700 cursor-pointer">
+                            {navItem.name}
+                        </li>
+                    </Link>
+                ))}
+            </ul>
+        </nav>
+    );
 };
 
 export default Header;

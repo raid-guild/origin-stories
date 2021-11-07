@@ -10,7 +10,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 import { getAllStories } from '../../utils/data';
-import mapImage from '../../public/images/map.png';
+import mapImage from '../../public/static/images/map.png';
 
 export default function Article({
     name,
@@ -67,7 +67,7 @@ export default function Article({
                                 >
                                     <Image
                                         className="object-cover object-center rounded-md"
-                                        src={header}
+                                        src={`/static/images/story/${header}`}
                                         alt={`${name} header illustration`}
                                         layout="fill"
                                         objectFit="cover"
