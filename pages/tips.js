@@ -5,7 +5,7 @@ import CardList from '../components/CardList';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
-import mapImage from '../public/images/map.png';
+import mapImage from '../public/static/images/map.png';
 
 const FreelancerTips = () => {
     return (

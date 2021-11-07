@@ -20,17 +20,19 @@ const Header = () => {
     return (
         <nav className="flex flex-col md:flex-row md:justify-between h-24 px-6 md:px-24 pt-4 w-vw">
             <div className="flex flex-row justify-between items-center">
-                <Link href="/" className="flex items-center space-x-2">
-                    <div className="h-14 w-24 relative">
-                        <Image
-                            src={rgLogo}
-                            alt="Raid Guild Logo"
-                            layout="fill"
-                        />
+                <Link href="/">
+                    <div className="flex items-center space-x-2">
+                        <div className="h-14 w-24 relative">
+                            <Image
+                                src={rgLogo}
+                                alt="Raid Guild Logo"
+                                layout="fill"
+                            />
+                        </div>
+                        <span className="font-medium text-xs tracking-widest border-l-2 border-white uppercase pl-2">
+                            Origins
+                        </span>
                     </div>
-                    <span className="font-medium text-xs tracking-widest border-l-2 border-white uppercase pl-2">
-                        Origins
-                    </span>
                 </Link>
 
                 <button

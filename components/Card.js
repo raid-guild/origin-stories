@@ -60,10 +60,10 @@ export default function Card({ story, index, inView, maxLength }) {
                     <small className="opacity-70">{username}</small>
                 </div>
             </div>
-            <Link href={'/origins/' + slug} className="w-full mt-2">
+            <Link href={'/origins/' + slug}>
                 <button
                     type="button"
-                    className="transition-all duration-300 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-2 px-4 h-14 rounded items-center w-full font-semibold hover:from-primary hover:to-purple-700"
+                    className="transition-all duration-300 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-2 px-4 h-14 rounded items-center w-full font-semibold hover:from-primary hover:to-purple-700 mt-2"
                 >
                     Read my story
                 </button>

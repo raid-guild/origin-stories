@@ -71,6 +71,7 @@ export default function Article({
                                         alt={`${name} header illustration`}
                                         layout="fill"
                                         objectFit="cover"
+                                        priority
                                     />
                                 </motion.div>
                             </div>
