@@ -1,16 +1,12 @@
+import { motion } from 'framer-motion';
+import { MDXRemote } from 'next-mdx-remote';
+import { serialize } from 'next-mdx-remote/serialize';
 import Head from 'next/head';
 import Image from 'next/image';
-
-import { serialize } from 'next-mdx-remote/serialize';
-import { MDXRemote } from 'next-mdx-remote';
-
-import { motion } from 'framer-motion';
-
-import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-
-import { getAllStories } from '../../utils/data';
+import Header from '../../components/Header';
 import mapImage from '../../public/static/images/map.png';
+import { getAllStories } from '../../utils/data';
 
 export default function Article({
     name,
