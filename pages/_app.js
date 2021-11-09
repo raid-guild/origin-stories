@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps, router }) {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
+                <meta name="twitter:creator" content="@RaidGuild" />
             </Head>
             <AnimatePresence>
                 <motion.div key={router.route}>
