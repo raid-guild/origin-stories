@@ -63,7 +63,7 @@ export default function Card({
 							featured ? 'border-yellow-400' : 'border-white'
 						} border-opacity-50 border-2 relative h-20 w-20 overflow-hidden`}>
 						<Image
-							src={`/story/${picture}`}
+							src={`/static/images/story/${picture}`}
 							className='object-cover object-center'
 							layout='fill'
 							alt='Picture of the author'
@@ -107,7 +107,7 @@ export default function Card({
 					<div className='flex items-center justify-start space-x-2 border-b-2 my-4 pb-4 border-indigo-200 border-opacity-50'>
 						<div className='relative overflow-hidden'>
 							<Image
-                        src={`/static/images/story/${picture}`}
+								src={`/static/images/story/${picture}`}
 								className='rounded-full'
 								height='50px'
 								width='50px'
