@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion';
+
 import Image from 'next/image';
+import Head from 'next/head';
+
 import CardList from '../components/CardList';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+
 import clicksWorld from '../public/static/images/clicks_world.png';
 import handHeart from '../public/static/images/hand_heart.png';
 import mapImage from '../public/static/images/map.png';
@@ -22,6 +26,33 @@ const Home = ({ stories }) => {
     };
     return (
         <>
+            <Head>
+                <title>Raid Guild Origins</title>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
+                <meta charSet="utf-8" />
+                <meta name="theme-color" content="#FF3864" />
+                <meta
+                    name="description"
+                    content="Learn the origin stories of raiders from Raid Guild! ⚔"
+                />
+
+                <meta property="og:title" content="Raid Guild Origins" />
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:url"
+                    content="https://portfolio.raidguild.org/"
+                />
+                <meta
+                    property="og:description"
+                    content="Learn the origin stories of members from Raid Guild! Hear their backgrounds: how they got into Web3, and Raid Guild; their thoughts on DAOs and more."
+                />
+                <meta property="og:image" content="/social-banner.png" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+            </Head>
             <div className="bg-dark-darker">
                 <div className="h-[650px] relative">
                     <div className="relative z-10">
