@@ -44,7 +44,7 @@ export default function Article({
                 />
                 <meta
                     property="og:image"
-                    content={`https://raidguild-origins.vercel.app/story/${header}`}
+                    content={`https://raidguild-origins.vercel.app/static/images/story/${header}`}
                     key="ogimage"
                 />
                 <meta
@@ -82,7 +82,7 @@ export default function Article({
                                 >
                                     <Image
                                         className="object-cover object-center rounded-md"
-                                        src={`/story/${header}`}
+                                        src={`/static/images/story/${header}`}
                                         alt={`${name} header illustration`}
                                         layout="fill"
                                         objectFit="cover"
