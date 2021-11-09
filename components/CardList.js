@@ -7,7 +7,7 @@ export default function CardList({ stories }) {
 		return a.featured === b.featured ? 0 : a.featured ? -1 : 1;
 	});
 	const featuredStoryCards = featuredStories.map((story, index) => {
-		let props = {
+		let cardProps = {
 			name: story.name,
 			slug: story.slug,
 			header: story.header,
@@ -19,7 +19,7 @@ export default function CardList({ stories }) {
 			inView: inView,
 			maxLength: stories.length,
 		};
-		return <Card key={index} props={props} />;
+		return <Card key={index} cardProps={cardProps} />;
 	});
 	return (
 		<>
