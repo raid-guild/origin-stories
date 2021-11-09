@@ -53,7 +53,7 @@ const Home = ({ stories }) => {
                 />
                 <meta
                     property="og:image"
-                    content="/social-banner.png"
+                    content="https://raidguild-origins.vercel.app/social-banner.png"
                     key="ogimage"
                 />
                 <meta

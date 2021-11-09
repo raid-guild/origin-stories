@@ -44,7 +44,7 @@ export default function Article({
                 />
                 <meta
                     property="og:image"
-                    content={`https://raidguild-origins-git-dev-seo-thebeyondr.vercel.app/story/${header}`}
+                    content={`https://raidguild-origins.vercel.app/story/${header}`}
                     key="ogimage"
                 />
                 <meta
