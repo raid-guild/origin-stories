@@ -34,10 +34,7 @@ export default function Article({
                     content={`${name} | Raid Guild Origins`}
                 />
                 <meta property="og:description" content={excerpt} />
-                <meta
-                    property="og:image"
-                    content={`/static/images/story/${header}`}
-                />
+                <meta property="og:image" content={`/story/${header}`} />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
@@ -46,7 +43,7 @@ export default function Article({
                 <div className="relative">
                     <div className="relative z-10">
                         <Header />
-                        <div className="px-4 md:px-36 lg:px-56 pt-4">
+                        <div className="px-4 md:px-40 lg:px-56 pt-4">
                             <div className="aspect-w-11 aspect-h-5 filter drop-shadow-lg max-h-[650px]">
                                 <motion.div
                                     animate={{
@@ -66,7 +63,7 @@ export default function Article({
                                 >
                                     <Image
                                         className="object-cover object-center rounded-md"
-                                        src={`/static/images/story/${header}`}
+                                        src={`/story/${header}`}
                                         alt={`${name} header illustration`}
                                         layout="fill"
                                         objectFit="cover"

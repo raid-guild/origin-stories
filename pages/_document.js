@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-
+// import { DefaultSEO } from 'next-seo';
+// import SEO from '../next-seo.config';
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx);
@@ -9,7 +10,8 @@ class MyDocument extends Document {
     render() {
         return (
             <Html>
-                <Head prefix="og:https://ogp.me/ns#">
+                {/* <DefaultSEO {...SEO} /> */}
+                <Head prefix="og:https://ogp.me/ns#" lang="en">
                     <link rel="icon" href="/favicon.ico" />
                     <link
                         rel="preload"
