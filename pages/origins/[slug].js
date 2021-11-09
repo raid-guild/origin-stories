@@ -23,21 +23,40 @@ export default function Article({
             <Head>
                 <title>{name} | Raid Guid Origins</title>
                 <meta name="description" content={excerpt} />
+
+                {/* Twitter */}
+                <meta
+                    property="twitter:card"
+                    content="summary_large_image"
+                    key="twcard"
+                />
+
                 {/* Facebook */}
-                <meta property="og:type" content="website" />
+                <meta
+                    property="og:site_name"
+                    content="Raid Guild Origins"
+                    key="ogsitename"
+                />
                 <meta
                     property="og:url"
                     content="https://portfolio.raidguild.org/"
+                    key="ogurl"
+                />
+                <meta
+                    property="og:image"
+                    content={`/story/${header}`}
+                    key="ogimage"
                 />
                 <meta
                     property="og:title"
                     content={`${name} | Raid Guild Origins`}
+                    key="ogtitle"
                 />
-                <meta property="og:description" content={excerpt} />
-                <meta property="og:image" content={`/story/${header}`} />
-
-                {/* Twitter */}
-                <meta property="twitter:card" content="summary_large_image" />
+                <meta
+                    property="og:description"
+                    content={excerpt}
+                    key="ogdesc"
+                />
             </Head>
             <div className="bg-dark-darker">
                 <div className="relative">

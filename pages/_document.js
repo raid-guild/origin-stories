@@ -10,7 +10,6 @@ class MyDocument extends Document {
     render() {
         return (
             <Html>
-                {/* <DefaultSEO {...SEO} /> */}
                 <Head prefix="og:https://ogp.me/ns#" lang="en">
                     <link rel="icon" href="/favicon.ico" />
                     <link

@@ -27,31 +27,45 @@ const Home = ({ stories }) => {
     return (
         <>
             <Head>
-                <title>Raid Guild Origins</title>
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
-                <meta charSet="utf-8" />
-                <meta name="theme-color" content="#FF3864" />
+                <title>Raid Guid Origins</title>
                 <meta
                     name="description"
-                    content="Learn the origin stories of raiders from Raid Guild! ⚔"
+                    content="Learn the origin stories of members from Raid Guild! Hear their backgrounds: how they got into Web3, and Raid Guild; their thoughts on DAOs and more."
                 />
 
-                <meta property="og:title" content="Raid Guild Origins" />
-                <meta property="og:type" content="website" />
+                {/* Twitter */}
+                <meta
+                    property="twitter:card"
+                    content="summary_large_image"
+                    key="twcard"
+                />
+
+                {/* Facebook */}
+                <meta
+                    property="og:site_name"
+                    content="Raid Guild Origins"
+                    key="ogsitename"
+                />
                 <meta
                     property="og:url"
                     content="https://portfolio.raidguild.org/"
+                    key="ogurl"
+                />
+                <meta
+                    property="og:image"
+                    content="/social-banner.png"
+                    key="ogimage"
+                />
+                <meta
+                    property="og:title"
+                    content="Raid Guild Origins"
+                    key="ogtitle"
                 />
                 <meta
                     property="og:description"
+                    key="ogdesc"
                     content="Learn the origin stories of members from Raid Guild! Hear their backgrounds: how they got into Web3, and Raid Guild; their thoughts on DAOs and more."
                 />
-                <meta property="og:image" content="/social-banner.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
             </Head>
             <div className="bg-dark-darker">
                 <div className="h-[650px] relative">
