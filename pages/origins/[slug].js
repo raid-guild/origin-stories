@@ -99,8 +99,8 @@ export default function Article({
 					/>
 					<div className='absolute inset-0 bg-gradient-to-b from-dark via-transparent to-dark-darker z-0'></div>
 				</div>
-				<div className='flex justify-center px-4'>
-					<div className='px-4 md:px-40 lg:px-56 w-2/3'>
+				<div className='flex justify-center'>
+					<div className='px-8 md:px-20 lg:px-36 w-full xl:w-2/3'>
 						<div
 							className={`rounded-full ring-4 ${
 								featured ? 'ring-yellow-400' : 'ring-white'
@@ -115,23 +115,21 @@ export default function Article({
 
 						<div className='py-6'>
 							<div className='flex flex-col justify-center items-start'>
-								<div className='flex gap-2 pb-1'>
-									<p className='text-2xl font-semibold font-sans tracking-tight'>
-										{name}
-									</p>
+								<div className='flex items-center gap-2 pb-1'>
+									<h2 className='font-sans tracking-tight'>{name}</h2>
 									{featured ? (
-										<span className='self-center rounded-md text-xs text-opacity-80 tracking-wider px-2 py-0.5 bg-yellow-400 bg-opacity-30'>
+										<span className='rounded-md text-xs text-opacity-80 tracking-wider px-2 py-0.5 bg-yellow-400 bg-opacity-30'>
 											⚔ FEATURED RAIDER
 										</span>
 									) : (
-										<span className='self-center rounded-md text-xs text-white text-opacity-80 tracking-wider px-2 py-0.5 bg-primary bg-opacity-30'>
+										<span className='rounded-md text-xs text-white text-opacity-80 tracking-wider px-2 py-0.5 bg-primary bg-opacity-30'>
 											⚔ MEMBER
 										</span>
 									)}
 								</div>
-								<small className='text-md font-normal font-sans tracking-tight text-white text-opacity-70'>
+								<p className='text-md font-normal font-sans tracking-tight text-white text-opacity-70'>
 									{username}
-								</small>
+								</p>
 							</div>
 							{/* <div className='flex flex-wrap py-2 gap-2 items-center mb-4 text-grey-200'>
 							<p className='rounded-md text-xs px-2 py-1 bg-white bg-opacity-10'>
@@ -147,7 +145,7 @@ export default function Article({
 								Smart Contract Dev
 							</p>
 						</div> */}
-							<p className='max-w-screen-md text-sm text-white text-opacity-90 leading-6 pt-4'>
+							<p className='max-w-screen-md text-md xl:text-sm text-white text-opacity-90 leading-6 pt-4'>
 								{bio}
 							</p>
 							<hr className='mt-8 xl:mt-10 border-t-2 border-white border-opacity-20' />
@@ -156,7 +154,7 @@ export default function Article({
 				</div>
 				<div className='flex justify-center px-4 md:px-40 lg:px-56 h-full'>
 					<main className='z-[999] px-6'>
-						<h1 className='font-sans'>My Origin Story</h1>
+						<h2 className='text-3xl xl:text-4xl font-sans'>My Origin Story</h2>
 						<p className='text-base pt-2'>
 							<span className='opacity-70'>— From a talk with </span>
 							<span className='text-primary opacity-100'>{interviewer}</span>
