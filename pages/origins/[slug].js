@@ -28,7 +28,7 @@ export default function Article({
         <>
             <Head>
                 <title>{name} | Raid Guid Origins</title>
-                <meta name="description" content={excerpt} />
+                <meta name="description" content={bio || excerpt} />
                 {/* Twitter */}
                 <meta
                     property="twitter:card"
@@ -60,7 +60,7 @@ export default function Article({
                 />
                 <meta
                     property="og:description"
-                    content={excerpt}
+                    content={bio || excerpt}
                     key="ogdesc"
                 />
             </Head>
