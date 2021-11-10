@@ -68,12 +68,12 @@ const Home = ({ stories }) => {
                 />
             </Head>
             <div className="bg-dark-darker">
-                <div className="h-[600px] relative">
+                <div className="relative pb-16">
                     <div className="relative z-10">
                         <Header />
-                        <div className="flex flex-col lg:flex-row lg:justify-between px-6 md:px-32 pt-16">
+                        <div className="flex flex-col lg:flex-row lg:justify-between px-6 md:px-32 pt-8 md:pt-16">
                             <div>
-                                <h1 className="font-display text-5xl mt-10 md:mt-0 md:w-[36rem]">
+                                <h1 className="font-display text-5xl pt-4 md:pt-0 md:w-[36rem]">
                                     Every Raider Comes From Somewhere
                                 </h1>
 
@@ -86,7 +86,7 @@ const Home = ({ stories }) => {
                                     DAO? The answers are in our stories.
                                 </p>
                             </div>
-                            <div className="flex my-4 md:my-0">
+                            <div className="flex py-8 md:py-4">
                                 <motion.div
                                     className="relative h-full"
                                     initial="initial"
