@@ -46,7 +46,7 @@ export default function Article({
 				/>
 				<meta
 					property='og:image'
-					content={`static/images/story/${header}`}
+					content={`/static/images/story/${header}`}
 					key='ogimage'
 				/>
 				content=
