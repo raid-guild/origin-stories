@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-
+// import { DefaultSEO } from 'next-seo';
+// import SEO from '../next-seo.config';
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx);
@@ -9,20 +10,43 @@ class MyDocument extends Document {
     render() {
         return (
             <Html>
-                <Head>
-                    <link rel="shortcut icon" href="/favicon.ico" />
+                <Head prefix="og: https://ogp.me/ns#" lang="en">
+                    <link rel="icon" href="/favicon.ico" />
                     <link
-                        rel="preconnect"
-                        href="https://fonts.googleapis.com"
+                        rel="preload"
+                        href="/static/fonts/OpenSans-Bold.ttf"
+                        as="font"
+                        crossOrigin=""
                     />
                     <link
-                        rel="preconnect"
-                        href="https://fonts.gstatic.com"
-                        crossOrigin="true"
+                        rel="preload"
+                        href="/static/fonts/OpenSans-Regular.ttf"
+                        as="font"
+                        crossOrigin=""
                     />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Uncial+Antiqua&display=swap"
-                        rel="stylesheet"
+                        rel="preload"
+                        href="/static/fonts/OpenSans-RegularItalic.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/static/fonts/OpenSans-SemiBold.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/static/fonts/OpenSans-SemiBoldItalic.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/static/fonts/UncialAntiqua.ttf"
+                        as="font"
+                        crossOrigin=""
                     />
                 </Head>
                 <body>
