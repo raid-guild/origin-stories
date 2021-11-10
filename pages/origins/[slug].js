@@ -58,7 +58,7 @@ export default function Article({
 				<div className='relative'>
 					<div className='relative z-10'>
 						<Header />
-						<div className='px-4 md:px-40 lg:px-56 pt-2'>
+						<div className='px-6 lg:px-20 xl:px-56 pt-2'>
 							<NextLink href='/' passRef>
 								<a className='flex gap-2 items-center hover:underline transition-all w-28'>
 									<svg
@@ -67,14 +67,14 @@ export default function Article({
 										viewBox='0 0 20 20'
 										xmlns='http://www.w3.org/2000/svg'>
 										<path
-											fill-rule='evenodd'
+											fillRule='evenodd'
 											d='M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z'
-											clip-rule='evenodd'></path>
+											clipRule='evenodd'></path>
 									</svg>
 									<div>All stories</div>
 								</a>
 							</NextLink>
-							{/* <div className="px-4 md:px-40 lg:px-56 pt-4"> */}
+							{/* <div className="px-4 md:px-40 lg:px-44 pt-4"> */}
 							<div className='aspect-w-11 aspect-h-5 filter drop-shadow-lg max-h-[650px] mt-4'>
 								<motion.div
 									animate={{
@@ -117,11 +117,11 @@ export default function Article({
 					<div className='absolute inset-0 bg-gradient-to-b from-dark via-transparent to-dark-darker z-0'></div>
 				</div>
 				<div className='flex justify-center'>
-					<div className='px-8 md:px-20 lg:px-36 w-full xl:w-2/3'>
+					<div className='px-12 lg:px-40 xl:px-80 w-screen'>
 						<div
 							className={`rounded-full ring-4 ring-opacity-60 ${
 								featured ? 'ring-yellow-400' : 'ring-white'
-							} relative -mt-8 xl:-mt-14 h-20 w-20 xl:h-32 xl:w-32 z-10 overflow-hidden`}>
+							} relative -mt-8 xl:-mt-14 h-24 w-24 lg:h-32 lg:w-32 z-10 overflow-hidden`}>
 							<Image
 								src={`/static/images/story/${picture}`}
 								className='object-cover object-center'
@@ -165,12 +165,12 @@ export default function Article({
 							<p className='max-w-screen-md text-base text-white leading-7 text-opacity-70 pt-4 tracking-wide'>
 								{bio}
 							</p>
-							<hr className='mt-8 xl:mt-10 border-t-2 border-white border-opacity-20' />
+							<hr className='my-8 xl:my-10 border-t-2 border-white border-opacity-20' />
 						</div>
 					</div>
 				</div>
-				<div className='flex justify-center px-4 md:px-40 lg:px-56 h-full'>
-					<main className='z-[999] px-6'>
+				<div className='flex justify-center h-full'>
+					<main className='z-[999] px-8'>
 						<h2 className='text-3xl xl:text-4xl font-sans'>My Origin Story</h2>
 						<p className='text-base pt-2'>
 							<span className='opacity-70'>— From a talk with </span>
