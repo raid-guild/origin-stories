@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
+
 import Head from 'next/head';
 import Image from 'next/image';
+import NextLink from 'next/link';
+
 import { useInView } from 'react-intersection-observer';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
@@ -65,9 +68,26 @@ export default function Article({
                 <div className="relative">
                     <div className="relative z-10">
                         <Header />
-                        <div className="px-4 md:px-40 lg:px-56 pt-4">
+                        <div className="px-4 md:px-40 lg:px-56 pt-2">
+                            <NextLink href="/" passRef>
+                                <a className="flex gap-2 items-center hover:underline transition-all w-28">
+                                    <svg
+                                        class="w-4 h-4"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                                            clip-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                    <div>All stories</div>
+                                </a>
+                            </NextLink>
                             {/* <div className="px-4 md:px-40 lg:px-56 pt-4"> */}
-                            <div className="aspect-w-11 aspect-h-5 filter drop-shadow-lg max-h-[650px]">
+                            <div className="aspect-w-11 aspect-h-5 filter drop-shadow-lg max-h-[650px] mt-4">
                                 <motion.div
                                     animate={{
                                         y: 0,
@@ -155,7 +175,7 @@ export default function Article({
 								Smart Contract Dev
 							</p>
 						</div> */}
-                            <p className="max-w-screen-md text-md xl:text-sm text-white text-opacity-90 leading-10 pt-4">
+                            <p className="max-w-screen-md text-base text-white leading-7 text-opacity-70 pt-4 tracking-wide">
                                 {bio}
                             </p>
                             <hr className="mt-8 xl:mt-10 border-t-2 border-white border-opacity-20" />
