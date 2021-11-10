@@ -44,7 +44,11 @@ export default function Article({
 					content='https://portfolio.raidguild.org/'
 					key='ogurl'
 				/>
-				<meta property='og:image' content={`/story/${header}`} key='ogimage' />
+				<meta
+					property='og:image'
+					content={`https://raidguild-origins.vercel.app/social/${header}`}
+					key='ogimage'
+				/>
 				content=
 				{`https://raidguild-origins.vercel.app/static/images/story/${header}`}
 				<meta
