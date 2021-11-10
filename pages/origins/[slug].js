@@ -111,7 +111,7 @@ export default function Article({
 						sizes='70vw'
 						quality='60'
 						draggable='false'
-						alt='Article Header'
+						alt={`${name} background illustration`}
 						priority='true'
 					/>
 					<div className='absolute inset-0 bg-gradient-to-b from-dark via-transparent to-dark-darker z-0'></div>
