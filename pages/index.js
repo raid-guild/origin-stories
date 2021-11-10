@@ -68,10 +68,10 @@ const Home = ({ stories }) => {
                 />
             </Head>
             <div className="bg-dark-darker">
-                <div className="h-[650px] relative">
+                <div className="h-[600px] relative">
                     <div className="relative z-10">
                         <Header />
-                        <div className="flex flex-col lg:flex-row lg:justify-between px-6 md:px-24 lg:pt-24">
+                        <div className="flex flex-col lg:flex-row lg:justify-between px-6 md:px-32 pt-16">
                             <div>
                                 <h1 className="font-display text-5xl mt-10 md:mt-0 md:w-[36rem]">
                                     Every Raider Comes From Somewhere
@@ -118,7 +118,7 @@ const Home = ({ stories }) => {
                         draggable="false"
                         alt="Raid map"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-dark via-primary opacity-80 z-0"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-dark via-primary to-dark-darker z-0 opacity-40"></div>
                 </div>
 
                 {/* Cards */}
