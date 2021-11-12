@@ -50,7 +50,7 @@ const Home = ({ stories }) => {
 				/>
 				<meta
 					property='og:image'
-					content='https://raidguild-origins.vercel.app/social-banner.png'
+					content='https://origins.raidguild.org/social-banner.png'
 					key='ogimage'
 				/>
 				<meta property='og:title' content='Raid Guild Origins' key='ogtitle' />
