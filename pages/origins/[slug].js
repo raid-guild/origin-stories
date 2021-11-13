@@ -47,11 +47,11 @@ export default function Article({
 				/>
 				<meta
 					property='og:image'
-					content={`https://raidguild-origins.vercel.app/social/${header}`}
+					content={`https://origins.raidguild.org/social/${header}`}
 					key='ogimage'
 				/>
 				content=
-				{`https://raidguild-origins.vercel.app/static/images/story/${header}`}
+				{`https://origins.raidguild.org/static/images/story/${header}`}
 				<meta
 					property='og:title'
 					content={`${name} | Raid Guild Origins`}
