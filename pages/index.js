@@ -24,7 +24,7 @@ const Home = ({ stories }) => {
 	return (
 		<>
 			<Head>
-				<title>Raid Guid Origins</title>
+				<title>Raid Guild Origins</title>
 				<meta
 					name='description'
 					content='Learn the origin stories of members from Raid Guild! Hear their backgrounds: how they got into Web3, and Raid Guild; their thoughts on DAOs and more.'
