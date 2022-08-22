@@ -6,7 +6,7 @@ import rgLogo from '../public/static/images/raidguild_logo.svg';
 
 const navigation = [
 	{ name: 'Home', href: '/' },
-	{ name: 'Freelancer Tips', href: '/tips' },
+	// { name: 'Freelancer Tips', href: '/tips' },
 ];
 
 const combineClasses = (...classes) => classes.filter(Boolean).join(' ');

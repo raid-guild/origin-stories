@@ -24,7 +24,7 @@ const Home = ({ stories }) => {
 	return (
 		<>
 			<Head>
-				<title>Raid Guid Origins</title>
+				<title>Raid Guild Origins</title>
 				<meta
 					name='description'
 					content='Learn the origin stories of members from Raid Guild! Hear their backgrounds: how they got into Web3, and Raid Guild; their thoughts on DAOs and more.'
@@ -50,7 +50,7 @@ const Home = ({ stories }) => {
 				/>
 				<meta
 					property='og:image'
-					content='https://raidguild-origins.vercel.app/social-banner.png'
+					content='https://origins.raidguild.org/social-banner.png'
 					key='ogimage'
 				/>
 				<meta property='og:title' content='Raid Guild Origins' key='ogtitle' />
