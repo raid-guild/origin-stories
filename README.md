@@ -6,7 +6,7 @@ This is the place where our raiders gather to tell their stories. We'll learn ab
 This project uses:
 - [Next.js](https://nextjs.org/) bootstrapped from [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 - [TailwindCSS🍃](https://tailwindcss.com/docs) for managing our CSS
-- [MDX](https://mdxjs.com/) to enable us to write JSX in Markdown files - for our stories
+- [Next-MDX-Remote](https://github.com/hashicorp/next-mdx-remote) to enable us to write JSX in Markdown files - for our stories
 
 ## Getting Started
 1. Clone the repo - Check out the [docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) if needed
@@ -16,8 +16,9 @@ This project uses:
     ```
 3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 4. You can start editing!
-   - Pages in the `/pages/` folder
-   - Components in the `/components/` folder
+   - Pages in the `/pages` folder
+   - Components in the `/components` folder
+   - Stories in the `/_content` folder
 
 ## Important Files
 We have some useful files that help us with our tooling.
