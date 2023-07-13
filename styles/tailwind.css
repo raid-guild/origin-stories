@@ -3,113 +3,157 @@
 @tailwind utilities;
 
 @layer base {
-	@font-face {
-		font-family: 'Uncial Antiqua';
-		src: url('/static/fonts/UncialAntiqua.ttf') format('truetype');
-		font-weight: 'regular';
-		font-style: 'normal';
-	}
-	@font-face {
-		font-family: 'Open Sans Regular';
-		src: local('Open Sans'), local('Open Sans Regular'),
-			local('Open Sans-Regular'),
-			url('/static/fonts/OpenSans-Regular.ttf') format('truetype');
-		font-weight: '400';
-		font-stye: 'normal';
-	}
-	@font-face {
-		font-family: 'Open Sans Italic';
-		src: local('Open Sans Italic'), local('Open Sans-Italic'),
-			url('/static/fonts/OpenSans-RegularItalic.ttf') format('truetype');
-		font-weight: '400';
-		font-style: 'italic';
-	}
-	@font-face {
-		font-family: 'Open Sans SemiBold';
-		src: local('Open Sans SemiBold'), local('Open Sans-SemiBold'),
-			url('/static/fonts/OpenSans-SemiBold.ttf') format('truetype');
-		font-weight: '600';
-		font-style: normal;
-	}
-	@font-face {
-		font-family: 'Open Sans SemiBold Italic';
-		src: local('Open Sans SemiBoldItalic'), local('Open Sans-SemiBoldItalic'),
-			url('/static/fonts/OpenSans-SemiBoldItalic.ttf') format('truetype');
-		font-weight: '600';
-		font-style: 'italic';
-	}
-	@font-face {
-		font-family: 'Open Sans Bold';
-		src: local('Open Sans Bold'), local('Open Sans-Bold'),
-			url('/static/fonts/OpenSans-Bold.ttf') format('truetype');
-		font-weight: '700';
-		font-stye: 'normal';
-	}
-	html {
-		@apply text-white m-0 p-0 text-sm;
-		scroll-behavior: smooth;
-	}
+  @font-face {
+    font-family: "Uncial Antiqua";
+    src: url("/static/fonts/UncialAntiqua.ttf") format("truetype");
+    font-weight: "regular";
+    font-style: "normal";
+  }
+  @font-face {
+    font-family: "Open Sans Regular";
+    src: local("Open Sans"), local("Open Sans Regular"),
+      local("Open Sans-Regular"),
+      url("/static/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: "400";
+    font-stye: "normal";
+  }
+  @font-face {
+    font-family: "Open Sans Italic";
+    src: local("Open Sans Italic"), local("Open Sans-Italic"),
+      url("/static/fonts/OpenSans-RegularItalic.ttf") format("truetype");
+    font-weight: "400";
+    font-style: "italic";
+  }
+  @font-face {
+    font-family: "Open Sans SemiBold";
+    src: local("Open Sans SemiBold"), local("Open Sans-SemiBold"),
+      url("/static/fonts/OpenSans-SemiBold.ttf") format("truetype");
+    font-weight: "600";
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Open Sans SemiBold Italic";
+    src: local("Open Sans SemiBoldItalic"), local("Open Sans-SemiBoldItalic"),
+      url("/static/fonts/OpenSans-SemiBoldItalic.ttf") format("truetype");
+    font-weight: "600";
+    font-style: "italic";
+  }
+  @font-face {
+    font-family: "Open Sans Bold";
+    src: local("Open Sans Bold"), local("Open Sans-Bold"),
+      url("/static/fonts/OpenSans-Bold.ttf") format("truetype");
+    font-weight: "700";
+    font-stye: "normal";
+  }
+  html {
+    @apply text-white m-0 p-0 text-sm;
+    scroll-behavior: smooth;
+  }
 
-	@media (min-width: 420px) {
-		html {
-			font-size: 1rem;
-		}
-	}
+  @media (min-width: 420px) {
+    html {
+      font-size: 1rem;
+    }
+  }
 
-	h1 {
-		@apply text-5xl font-display font-bold tracking-tight leading-snug;
-	}
+  h1 {
+    @apply text-5xl font-display font-bold tracking-tight leading-snug;
+  }
 
-	h2 {
-		@apply text-4xl font-display font-bold leading-snug;
-	}
+  h2 {
+    @apply text-4xl font-display font-bold leading-snug;
+  }
 
-	h3 {
-		@apply text-3xl font-display font-bold leading-snug;
-	}
+  h3 {
+    @apply text-3xl font-display font-bold leading-snug;
+  }
 
-	h4 {
-		@apply text-2xl font-sans font-bold leading-snug tracking-tight;
-	}
+  h4 {
+    @apply text-2xl font-sans font-bold leading-snug tracking-tight;
+  }
 
-	h5 {
-		@apply text-xl font-sans font-bold leading-snug tracking-tight;
-	}
+  h5 {
+    @apply text-xl font-sans font-bold leading-snug tracking-tight;
+  }
 
-	h6 {
-		@apply text-lg font-sans font-bold leading-snug tracking-tight;
-	}
+  h6 {
+    @apply text-lg font-sans font-bold leading-snug tracking-tight;
+  }
 
-	p,
-	blockquote {
-		@apply font-sans text-lg leading-snug tracking-wide font-normal;
-	}
+  p,
+  blockquote {
+    @apply font-sans text-lg leading-snug tracking-wide font-normal;
+  }
 
-	a {
-		@apply font-sans text-base leading-relaxed tracking-wide;
-	}
+  a {
+    @apply font-sans text-base leading-relaxed tracking-wide;
+  }
 
-	article p {
-		@apply leading-8 tracking-normal;
-	}
+  article p {
+    @apply leading-8 tracking-normal;
+  }
 
-	small {
-		@apply font-sans text-sm leading-relaxed text-white font-medium tracking-wide;
-	}
+  small {
+    @apply font-sans text-sm leading-relaxed text-white font-medium tracking-wide;
+  }
 
-	.card-user {
-		@apply font-display text-lg leading-relaxed tracking-wide font-semibold;
-	}
+  .card-user {
+    @apply font-display text-lg leading-relaxed tracking-wide font-semibold;
+  }
 
-	.card {
-		@apply max-w-sm bg-dark p-8 m-4 bg-opacity-80 backdrop-blur shadow-2xl rounded tracking-normal flex flex-col;
-	}
+  .card {
+    @apply max-w-sm bg-dark p-8 m-4 bg-opacity-80 backdrop-blur shadow-2xl rounded tracking-normal flex flex-col;
+  }
 
-	.story-card {
-		@apply max-w-sm rounded-md bg-white bg-opacity-10 ring-2 ring-gray-400 ring-inset backdrop-filter backdrop-blur-xl p-8 shadow-lg flex flex-col;
-	}
+  .story-card {
+    @apply max-w-sm rounded-md bg-white bg-opacity-10 ring-2 ring-gray-400 ring-inset backdrop-filter backdrop-blur-xl p-8 shadow-lg flex flex-col;
+  }
 
-	.featured-raider-card {
-		@apply ring-2 ring-yellow-400 ring-inset;
-	}
+  .featured-raider-card {
+    @apply ring-2 ring-yellow-400 ring-inset;
+  }
+}
+
+@layer components {
+  .normal-raider-card {
+    border: double 2px transparent;
+    border-radius: 6px;
+    background-image: linear-gradient(#290c3b, #290c3b),
+      linear-gradient(316deg, #9207ff, #fb37c4, #9207ff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: relative;
+  }
+
+  .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
 }
