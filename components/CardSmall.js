@@ -67,8 +67,8 @@ export default function CardSmall({
               <p className="card-user">{name}</p>
             </div>
 
-            <div className="text-primary-info mb-2">
-              <span>{roles}</span>
+            <div className="text-primary-info mb-2 text-sm">
+              <span>{roles.toUpperCase()}</span>
             </div>
           </div>
         </div>

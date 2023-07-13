@@ -21,8 +21,11 @@ export default function Article({
   excerpt,
   interviewer,
   content,
+  roles,
+  socials,
 }) {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true });
+
   return (
     <>
       <Head>
@@ -126,36 +129,38 @@ export default function Article({
         </div>
         <div className="flex justify-center">
           <div className="px-12 lg:px-40 xl:px-80 w-screen">
-            <div
-              className={`rounded-full ring-4 ring-opacity-60 ${
-                featured ? "ring-yellow-400" : "ring-white"
-              } relative -mt-8 xl:-mt-14 h-24 w-24 lg:h-32 lg:w-32 z-10 overflow-hidden`}
-            >
-              <Image
-                src={`/static/images/story/${picture}`}
-                className="object-cover object-center"
-                layout="fill"
-                alt={name}
-              />
+            <div className="flex items-start">
+              <div
+                className={`rounded-full ring-4 ring-opacity-60 ${
+                  featured ? "ring-yellow-400" : "ring-white"
+                } relative -mt-8 xl:-mt-14 h-24 w-24 lg:h-32 lg:w-32 z-10 overflow-hidden`}
+              >
+                <Image
+                  src={`/static/images/story/${picture}`}
+                  className="object-cover object-center"
+                  layout="fill"
+                  alt={name}
+                />
+              </div>
+              <div className="flex flex-wrap items-center gap-2 ml-6">
+                <h3 className="w-full">{name}</h3>
+                {featured ? (
+                  <span className="rounded-md text-xs text-opacity-80 tracking-wider px-2 py-0.5 bg-yellow-400 bg-opacity-30">
+                    ⚔ FEATURED RAIDER
+                  </span>
+                ) : (
+                  <span className="text-primary-info mb-2 text-sm">
+                    ⚔ {roles.toUpperCase()}
+                  </span>
+                )}
+              </div>
             </div>
 
             <div className="py-6">
               <div className="flex flex-col justify-center items-start">
-                <div className="flex flex-wrap items-center gap-2">
-                  <h3>{name}</h3>
-                  {featured ? (
-                    <span className="rounded-md text-xs text-opacity-80 tracking-wider px-2 py-0.5 bg-yellow-400 bg-opacity-30">
-                      ⚔ FEATURED RAIDER
-                    </span>
-                  ) : (
-                    <span className="rounded-md text-xs text-white text-opacity-80 tracking-wider px-2 py-0.5 bg-primary bg-opacity-30">
-                      ⚔ MEMBER
-                    </span>
-                  )}
-                </div>
-                <p className="text-sm font-normal font-sans text-white text-opacity-70 pt-2 md:pt-0">
+                {/* <p className="text-sm font-normal font-sans text-white text-opacity-70 pt-2 md:pt-0">
                   {username}
-                </p>
+                </p> */}
               </div>
               {/* <div className='flex flex-wrap py-2 gap-2 items-center mb-4 text-grey-200'>
 							<p className='rounded-md text-xs px-2 py-1 bg-white bg-opacity-10'>
@@ -172,7 +177,7 @@ export default function Article({
 							</p>
 						</div> */}
 
-              <p className="max-w-screen-md text-base text-white leading-7 text-opacity-70 pt-4 pb-2 tracking-wide">
+              <p className="max-w-screen-md text-base text-white leading-7 text-opacity-70 italic pt-4 pb-2 tracking-wide">
                 {bio}
               </p>
               <div className="flex gap-4">

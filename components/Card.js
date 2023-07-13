@@ -106,8 +106,8 @@ export default function Card({
         </div>
       ) : (
         <>
-          <span className="text-primary-info mb-2">
-            <span>{roles}</span>
+          <span className="text-primary-info mb-2 text-sm">
+            <span>{roles.toUpperCase()}</span>
           </span>
           <div className="flex items-center justify-start space-x-2 ">
             <div className="relative overflow-hidden">
