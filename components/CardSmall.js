@@ -48,7 +48,7 @@ export default function CardSmall({
       initial="hidden"
       animate={inView ? "show" : "hidden"}
       transition="transition"
-      whileHover={router.route === "/" ? "hover" : ""}
+      whilehover={router.route === "/" ? "hover" : ""}
       variants={card}
     >
       <>

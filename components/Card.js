@@ -50,7 +50,7 @@ export default function Card({
       initial="hidden"
       animate={inView ? "show" : "hidden"}
       transition="transition"
-      whileHover={router.route === "/" ? "hover" : ""}
+      whilehover={router.route === "/" ? "hover" : ""}
       variants={card}
     >
       {featured && router.route !== "/origins/[slug]" ? (
